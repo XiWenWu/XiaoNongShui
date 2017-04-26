@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NWorkController.h
 //  xiaoNS
 //
 //  Created by 希文 on 2017/4/26.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface NWorkController : UITableViewController
 
 @end
-

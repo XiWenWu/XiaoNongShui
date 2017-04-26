@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C74BEA91EB0A36900A70185 /* NNavManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C74BEA81EB0A36900A70185 /* NNavManageController.m */; };
+		9C74BEAC1EB0A3AE00A70185 /* NNavRepairController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C74BEAB1EB0A3AE00A70185 /* NNavRepairController.m */; };
+		9C74BEAF1EB0A3C600A70185 /* NNavWorkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C74BEAE1EB0A3C600A70185 /* NNavWorkController.m */; };
+		9C74BEB21EB0A3D700A70185 /* NNavHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C74BEB11EB0A3D700A70185 /* NNavHomeController.m */; };
 		9CF75D311EB038D000F7112D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D301EB038D000F7112D /* main.m */; };
 		9CF75D341EB038D000F7112D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D331EB038D000F7112D /* AppDelegate.m */; };
-		9CF75D371EB038D000F7112D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D361EB038D000F7112D /* ViewController.m */; };
 		9CF75D3A1EB038D000F7112D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF75D381EB038D000F7112D /* Main.storyboard */; };
 		9CF75D3C1EB038D000F7112D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF75D3B1EB038D000F7112D /* Assets.xcassets */; };
 		9CF75D3F1EB038D000F7112D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF75D3D1EB038D000F7112D /* LaunchScreen.storyboard */; };
 		9CF75D4A1EB038D100F7112D /* xiaoNSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D491EB038D100F7112D /* xiaoNSTests.m */; };
 		9CF75D551EB038D100F7112D /* xiaoNSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D541EB038D100F7112D /* xiaoNSUITests.m */; };
+		9CF75D751EB03CAE00F7112D /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D711EB03CAE00F7112D /* MBProgressHUD+MJ.m */; };
+		9CF75D761EB03CAE00F7112D /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9CF75D721EB03CAE00F7112D /* MBProgressHUD.bundle */; };
+		9CF75D771EB03CAE00F7112D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D741EB03CAE00F7112D /* MBProgressHUD.m */; };
+		9CF75D7F1EB03E8A00F7112D /* NLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D7D1EB03E8A00F7112D /* NLoginController.m */; };
+		9CF75D801EB03E8A00F7112D /* NLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF75D7E1EB03E8A00F7112D /* NLoginController.xib */; };
+		9CF75D841EB03F4600F7112D /* NTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D831EB03F4600F7112D /* NTabBarController.m */; };
+		9CF75D881EB0448900F7112D /* NHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D871EB0448900F7112D /* NHomeController.m */; };
+		9CF75D8C1EB044B500F7112D /* NWorkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D8B1EB044B500F7112D /* NWorkController.m */; };
+		9CF75D911EB0450B00F7112D /* NRepairController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D901EB0450B00F7112D /* NRepairController.m */; };
+		9CF75D941EB0452200F7112D /* NManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D931EB0452200F7112D /* NManageController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +48,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C74BEA71EB0A36900A70185 /* NNavManageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNavManageController.h; sourceTree = "<group>"; };
+		9C74BEA81EB0A36900A70185 /* NNavManageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNavManageController.m; sourceTree = "<group>"; };
+		9C74BEAA1EB0A3AE00A70185 /* NNavRepairController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNavRepairController.h; sourceTree = "<group>"; };
+		9C74BEAB1EB0A3AE00A70185 /* NNavRepairController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNavRepairController.m; sourceTree = "<group>"; };
+		9C74BEAD1EB0A3C600A70185 /* NNavWorkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNavWorkController.h; sourceTree = "<group>"; };
+		9C74BEAE1EB0A3C600A70185 /* NNavWorkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNavWorkController.m; sourceTree = "<group>"; };
+		9C74BEB01EB0A3D700A70185 /* NNavHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNavHomeController.h; sourceTree = "<group>"; };
+		9C74BEB11EB0A3D700A70185 /* NNavHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNavHomeController.m; sourceTree = "<group>"; };
 		9CF75D2C1EB038D000F7112D /* xiaoNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xiaoNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF75D301EB038D000F7112D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CF75D321EB038D000F7112D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9CF75D331EB038D000F7112D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9CF75D351EB038D000F7112D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9CF75D361EB038D000F7112D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9CF75D391EB038D000F7112D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CF75D3B1EB038D000F7112D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CF75D3E1EB038D000F7112D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +70,24 @@
 		9CF75D501EB038D100F7112D /* xiaoNSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xiaoNSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF75D541EB038D100F7112D /* xiaoNSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xiaoNSUITests.m; sourceTree = "<group>"; };
 		9CF75D561EB038D100F7112D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CF75D701EB03CAE00F7112D /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		9CF75D711EB03CAE00F7112D /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		9CF75D721EB03CAE00F7112D /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		9CF75D731EB03CAE00F7112D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		9CF75D741EB03CAE00F7112D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		9CF75D7C1EB03E8A00F7112D /* NLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLoginController.h; sourceTree = "<group>"; };
+		9CF75D7D1EB03E8A00F7112D /* NLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLoginController.m; sourceTree = "<group>"; };
+		9CF75D7E1EB03E8A00F7112D /* NLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NLoginController.xib; sourceTree = "<group>"; };
+		9CF75D821EB03F4600F7112D /* NTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTabBarController.h; sourceTree = "<group>"; };
+		9CF75D831EB03F4600F7112D /* NTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTabBarController.m; sourceTree = "<group>"; };
+		9CF75D861EB0448900F7112D /* NHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHomeController.h; sourceTree = "<group>"; };
+		9CF75D871EB0448900F7112D /* NHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHomeController.m; sourceTree = "<group>"; };
+		9CF75D8A1EB044B500F7112D /* NWorkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWorkController.h; sourceTree = "<group>"; };
+		9CF75D8B1EB044B500F7112D /* NWorkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWorkController.m; sourceTree = "<group>"; };
+		9CF75D8F1EB0450B00F7112D /* NRepairController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRepairController.h; sourceTree = "<group>"; };
+		9CF75D901EB0450B00F7112D /* NRepairController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRepairController.m; sourceTree = "<group>"; };
+		9CF75D921EB0452200F7112D /* NManageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NManageController.h; sourceTree = "<group>"; };
+		9CF75D931EB0452200F7112D /* NManageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NManageController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +115,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C74BEA61EB094AF00A70185 /* navbar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = navbar;
+			sourceTree = "<group>";
+		};
 		9CF75D231EB038D000F7112D = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +145,11 @@
 		9CF75D2E1EB038D000F7112D /* xiaoNS */ = {
 			isa = PBXGroup;
 			children = (
+				9CF75D641EB03C5700F7112D /* tools */,
+				9CF75D631EB03C4F00F7112D /* other */,
+				9CF75D621EB03C3800F7112D /* class */,
 				9CF75D321EB038D000F7112D /* AppDelegate.h */,
 				9CF75D331EB038D000F7112D /* AppDelegate.m */,
-				9CF75D351EB038D000F7112D /* ViewController.h */,
-				9CF75D361EB038D000F7112D /* ViewController.m */,
 				9CF75D381EB038D000F7112D /* Main.storyboard */,
 				9CF75D3B1EB038D000F7112D /* Assets.xcassets */,
 				9CF75D3D1EB038D000F7112D /* LaunchScreen.storyboard */,
@@ -138,6 +183,134 @@
 				9CF75D561EB038D100F7112D /* Info.plist */,
 			);
 			path = xiaoNSUITests;
+			sourceTree = "<group>";
+		};
+		9CF75D621EB03C3800F7112D /* class */ = {
+			isa = PBXGroup;
+			children = (
+				9CF75D791EB03CCD00F7112D /* model */,
+				9CF75D7A1EB03CD900F7112D /* view */,
+				9CF75D781EB03CC100F7112D /* controller */,
+			);
+			name = class;
+			sourceTree = "<group>";
+		};
+		9CF75D631EB03C4F00F7112D /* other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = other;
+			sourceTree = "<group>";
+		};
+		9CF75D641EB03C5700F7112D /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				9CF75D6F1EB03CAE00F7112D /* MBProgressHUD */,
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
+		9CF75D6F1EB03CAE00F7112D /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				9CF75D701EB03CAE00F7112D /* MBProgressHUD+MJ.h */,
+				9CF75D711EB03CAE00F7112D /* MBProgressHUD+MJ.m */,
+				9CF75D721EB03CAE00F7112D /* MBProgressHUD.bundle */,
+				9CF75D731EB03CAE00F7112D /* MBProgressHUD.h */,
+				9CF75D741EB03CAE00F7112D /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = SOURCE_ROOT;
+		};
+		9CF75D781EB03CC100F7112D /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				9CF75D8E1EB044BB00F7112D /* manage */,
+				9CF75D8D1EB044B900F7112D /* repair */,
+				9CF75D891EB0449600F7112D /* work */,
+				9CF75D851EB03FC000F7112D /* home */,
+				9CF75D811EB03ED200F7112D /* tabbar */,
+				9C74BEA61EB094AF00A70185 /* navbar */,
+				9CF75D7B1EB03E4300F7112D /* login */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		9CF75D791EB03CCD00F7112D /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		9CF75D7A1EB03CD900F7112D /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		9CF75D7B1EB03E4300F7112D /* login */ = {
+			isa = PBXGroup;
+			children = (
+				9CF75D7C1EB03E8A00F7112D /* NLoginController.h */,
+				9CF75D7D1EB03E8A00F7112D /* NLoginController.m */,
+				9CF75D7E1EB03E8A00F7112D /* NLoginController.xib */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		9CF75D811EB03ED200F7112D /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				9CF75D821EB03F4600F7112D /* NTabBarController.h */,
+				9CF75D831EB03F4600F7112D /* NTabBarController.m */,
+			);
+			name = tabbar;
+			sourceTree = "<group>";
+		};
+		9CF75D851EB03FC000F7112D /* home */ = {
+			isa = PBXGroup;
+			children = (
+				9C74BEB01EB0A3D700A70185 /* NNavHomeController.h */,
+				9C74BEB11EB0A3D700A70185 /* NNavHomeController.m */,
+				9CF75D861EB0448900F7112D /* NHomeController.h */,
+				9CF75D871EB0448900F7112D /* NHomeController.m */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
+		9CF75D891EB0449600F7112D /* work */ = {
+			isa = PBXGroup;
+			children = (
+				9C74BEAD1EB0A3C600A70185 /* NNavWorkController.h */,
+				9C74BEAE1EB0A3C600A70185 /* NNavWorkController.m */,
+				9CF75D8A1EB044B500F7112D /* NWorkController.h */,
+				9CF75D8B1EB044B500F7112D /* NWorkController.m */,
+			);
+			name = work;
+			sourceTree = "<group>";
+		};
+		9CF75D8D1EB044B900F7112D /* repair */ = {
+			isa = PBXGroup;
+			children = (
+				9C74BEAA1EB0A3AE00A70185 /* NNavRepairController.h */,
+				9C74BEAB1EB0A3AE00A70185 /* NNavRepairController.m */,
+				9CF75D8F1EB0450B00F7112D /* NRepairController.h */,
+				9CF75D901EB0450B00F7112D /* NRepairController.m */,
+			);
+			name = repair;
+			sourceTree = "<group>";
+		};
+		9CF75D8E1EB044BB00F7112D /* manage */ = {
+			isa = PBXGroup;
+			children = (
+				9C74BEA71EB0A36900A70185 /* NNavManageController.h */,
+				9C74BEA81EB0A36900A70185 /* NNavManageController.m */,
+				9CF75D921EB0452200F7112D /* NManageController.h */,
+				9CF75D931EB0452200F7112D /* NManageController.m */,
+			);
+			name = manage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +422,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF75D801EB03E8A00F7112D /* NLoginController.xib in Resources */,
 				9CF75D3F1EB038D000F7112D /* LaunchScreen.storyboard in Resources */,
+				9CF75D761EB03CAE00F7112D /* MBProgressHUD.bundle in Resources */,
 				9CF75D3C1EB038D000F7112D /* Assets.xcassets in Resources */,
 				9CF75D3A1EB038D000F7112D /* Main.storyboard in Resources */,
 			);
@@ -276,9 +451,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CF75D371EB038D000F7112D /* ViewController.m in Sources */,
+				9CF75D841EB03F4600F7112D /* NTabBarController.m in Sources */,
+				9CF75D8C1EB044B500F7112D /* NWorkController.m in Sources */,
+				9CF75D881EB0448900F7112D /* NHomeController.m in Sources */,
+				9C74BEA91EB0A36900A70185 /* NNavManageController.m in Sources */,
+				9CF75D7F1EB03E8A00F7112D /* NLoginController.m in Sources */,
+				9CF75D751EB03CAE00F7112D /* MBProgressHUD+MJ.m in Sources */,
+				9C74BEAF1EB0A3C600A70185 /* NNavWorkController.m in Sources */,
+				9CF75D941EB0452200F7112D /* NManageController.m in Sources */,
+				9C74BEAC1EB0A3AE00A70185 /* NNavRepairController.m in Sources */,
+				9CF75D911EB0450B00F7112D /* NRepairController.m in Sources */,
 				9CF75D341EB038D000F7112D /* AppDelegate.m in Sources */,
+				9C74BEB21EB0A3D700A70185 /* NNavHomeController.m in Sources */,
 				9CF75D311EB038D000F7112D /* main.m in Sources */,
+				9CF75D771EB03CAE00F7112D /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +702,7 @@
 				9CF75D5B1EB038D100F7112D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9CF75D5C1EB038D100F7112D /* Build configuration list for PBXNativeTarget "xiaoNSTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +711,7 @@
 				9CF75D5E1EB038D100F7112D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9CF75D5F1EB038D100F7112D /* Build configuration list for PBXNativeTarget "xiaoNSUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +720,7 @@
 				9CF75D611EB038D100F7112D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
