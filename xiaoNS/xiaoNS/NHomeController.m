@@ -2,13 +2,16 @@
 //  NHomeController.m
 //  xiaoNS
 //
-//  Created by 希文 on 2017/4/26.
+//  Created by 希文 on 2017/4/27.
 //  Copyright © 2017年 xiwen. All rights reserved.
 //
 
 #import "NHomeController.h"
 
-@interface NHomeController ()
+@interface NHomeController ()<UICollectionViewDelegate>
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+// 应用信息
+@property (strong, nonatomic) NSArray *icons;
 
 @end
 
@@ -16,9 +19,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+    // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"首页";
+    // 第一个组件
+    [self initFirstView];
+
+}
+
+- (void)initFirstView {
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.itemSize = CGSizeMake(100, 100);
+    flowLayout.minimumLineSpacing = 10;
+    flowLayout.minimumInteritemSpacing = 20;
+    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    
+    CGRect rect = {0, 0, self.view.frame.size.width, self.view.frame.size.height};
+    
+    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
+    [self.scrollView addSubview:collection];
 }
 
 - (void)didReceiveMemoryWarning {

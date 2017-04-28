@@ -5,10 +5,16 @@
 //  Created by 希文 on 2017/4/26.
 //  Copyright © 2017年 xiwen. All rights reserved.
 //
-
+// 导入控制器
 #import "NWorkController.h"
+// 导入工具
+#import "AFHTTPSessionManager.h"
+// #import "MJExtension.h"
+// 导入模板
 
 @interface NWorkController ()
+/** 工程信息 */
+@property (nonatomic, strong) NSArray *works;
 
 @end
 
@@ -23,6 +29,21 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"工程";
+    // 通过网络请求获取数据
+    [self setUpWorks];
+}
+/** 通过网络请求获取数据 */
+- (void)setUpWorks {
+    // 创建请求管理对象
+    AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
+    // 发送请求
+    [manger GET:@"http://www.cloudowr.com:8801/nsgcgl/api/v3/projectList?key=android&userid=1" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@", responseObject[@"ret"]);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
