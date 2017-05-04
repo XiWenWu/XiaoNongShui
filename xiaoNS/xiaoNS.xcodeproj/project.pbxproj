@@ -32,6 +32,8 @@
 		9CB089531EB1FE0C002E5D50 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB0894F1EB1FE0C002E5D50 /* MBProgressHUD+MJ.m */; };
 		9CB089541EB1FE0C002E5D50 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9CB089501EB1FE0C002E5D50 /* MBProgressHUD.bundle */; };
 		9CB089551EB1FE0C002E5D50 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB089521EB1FE0C002E5D50 /* MBProgressHUD.m */; };
+		9CD0DFDE1EB2DA8B00299212 /* WorkInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0DFDC1EB2DA8B00299212 /* WorkInfoCell.m */; };
+		9CD0DFDF1EB2DA8B00299212 /* WorkInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD0DFDD1EB2DA8B00299212 /* WorkInfoCell.xib */; };
 		9CF75D311EB038D000F7112D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D301EB038D000F7112D /* main.m */; };
 		9CF75D341EB038D000F7112D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D331EB038D000F7112D /* AppDelegate.m */; };
 		9CF75D3A1EB038D000F7112D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF75D381EB038D000F7112D /* Main.storyboard */; };
@@ -116,6 +118,9 @@
 		9CB089501EB1FE0C002E5D50 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		9CB089511EB1FE0C002E5D50 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		9CB089521EB1FE0C002E5D50 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		9CD0DFDB1EB2DA8B00299212 /* WorkInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkInfoCell.h; sourceTree = "<group>"; };
+		9CD0DFDC1EB2DA8B00299212 /* WorkInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkInfoCell.m; sourceTree = "<group>"; };
+		9CD0DFDD1EB2DA8B00299212 /* WorkInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkInfoCell.xib; sourceTree = "<group>"; };
 		9CF75D2C1EB038D000F7112D /* xiaoNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xiaoNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF75D301EB038D000F7112D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CF75D321EB038D000F7112D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -346,6 +351,9 @@
 			children = (
 				9CB0890B1EB1F6A2002E5D50 /* WorksInfo.h */,
 				9CB0890C1EB1F6A2002E5D50 /* WorksInfo.m */,
+				9CD0DFDB1EB2DA8B00299212 /* WorkInfoCell.h */,
+				9CD0DFDC1EB2DA8B00299212 /* WorkInfoCell.m */,
+				9CD0DFDD1EB2DA8B00299212 /* WorkInfoCell.xib */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -533,6 +541,7 @@
 				9CF75D801EB03E8A00F7112D /* NLoginController.xib in Resources */,
 				9CF75D3F1EB038D000F7112D /* LaunchScreen.storyboard in Resources */,
 				9CF75D3C1EB038D000F7112D /* Assets.xcassets in Resources */,
+				9CD0DFDF1EB2DA8B00299212 /* WorkInfoCell.xib in Resources */,
 				9CF75D3A1EB038D000F7112D /* Main.storyboard in Resources */,
 				9CB088CF1EB1C6BF002E5D50 /* NHomeController.xib in Resources */,
 				9CB089541EB1FE0C002E5D50 /* MBProgressHUD.bundle in Resources */,
@@ -578,6 +587,7 @@
 				9CB089041EB1EFF7002E5D50 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				9CB089021EB1EFF7002E5D50 /* AFAutoPurgingImageCache.m in Sources */,
 				9C74BEAC1EB0A3AE00A70185 /* NNavRepairController.m in Sources */,
+				9CD0DFDE1EB2DA8B00299212 /* WorkInfoCell.m in Sources */,
 				9CF75D911EB0450B00F7112D /* NRepairController.m in Sources */,
 				9CF75D341EB038D000F7112D /* AppDelegate.m in Sources */,
 				9CB0890D1EB1F6A2002E5D50 /* WorksInfo.m in Sources */,

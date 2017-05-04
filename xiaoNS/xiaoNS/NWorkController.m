@@ -9,8 +9,10 @@
 #import "NWorkController.h"
 // 导入工具
 #import "AFHTTPSessionManager.h"
-// #import "MJExtension.h"
-// 导入模板
+// 导入模型
+#import "WorksInfo.h"
+#import "WorkInfoCell.h"
+
 
 @interface NWorkController ()
 /** 工程信息 */
@@ -29,6 +31,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"工程";
+    self.tableView.rowHeight = 130;
     // 通过网络请求获取数据
     [self setUpWorks];
 }
@@ -40,9 +43,22 @@
     [manger GET:@"http://www.cloudowr.com:8801/nsgcgl/api/v3/projectList?key=android&userid=1" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@", responseObject[@"ret"]);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", responseObject[@"ret"][@"list"]);
+        // 获取数据
+        NSArray *dictArray = responseObject[@"ret"][@"list"];
+        // 将字典数据转为模型数据
+        NSMutableArray *workArray = [NSMutableArray array];
+        // 遍历，转换
+        for (NSDictionary *dict in dictArray) {
+            WorksInfo *work = [WorksInfo workWithDict:dict];
+            // 添加模型
+            [workArray addObject:work];
+        }
+        self.works = workArray;
         
+        [self.tableView reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"网络请求失败");
     }];
 }
 
@@ -54,24 +70,26 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.works.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    static NSString *Cid = @"wicell";
+    WorkInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:Cid];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"WorkInfoCell" owner:nil options:nil] lastObject];
+    }
+    WorksInfo *info = self.works[indexPath.row];
+    cell.work = info;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
