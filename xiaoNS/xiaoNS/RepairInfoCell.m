@@ -35,16 +35,16 @@
 - (void)setRepair:(RepairInfo *)repair {
     _repair = repair;
     
-    self.nameView.text = [repair.name substringFromIndex:11];
+    self.nameView.text = repair.name;
     self.dateView.text = repair.date;
     if (repair.status == -1) {
-        self.statusView.text = @"验收未通过";
+        self.statusView.text = @"维修申请中";
         self.statusView.textColor = [UIColor redColor];
     } else if (repair.status == 0) {
-        self.statusView.text = @"进行中...";
+        self.statusView.text = @"维修施工中";
         self.statusView.textColor = [UIColor blueColor];
     } else {
-        self.statusView.text = @"验收通过";
+        self.statusView.text = @"维修完毕";
         self.statusView.textColor = [UIColor greenColor];
     }
     

@@ -41,7 +41,7 @@
     // 创建网络请求对象
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     // 发送请求
-    [manager GET:@"http://www.cloudowr.com:8801/nsgcgl/api/v3/maintainList?key=android&userid=1" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [manager GET:@"http://www.cloudowr.com:8801/nsgcgl/api/v3/repairList?key=android&userid=1" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         // 接收网络请求返回的数据

@@ -5,10 +5,17 @@
 //  Created by 希文 on 2017/4/26.
 //  Copyright © 2017年 xiwen. All rights reserved.
 //
-
+// 导入控制器
 #import "NManageController.h"
+// 导入工具
+#import "AFHTTPSessionManager.h"
+// 导入模型
+#import "ManageInfo.h"
+#import "ManageInfoCell.h"
 
 @interface NManageController ()
+
+@property (nonatomic, strong) NSArray *manages;
 
 @end
 
@@ -16,13 +23,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.tableView.rowHeight = 60;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    
+    [self setManages];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"管护";
+}
+
+- (void)setManages {
+    // 网络请求
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    //
+    [manager GET:@"http://www.cloudowr.com:8801/nsgcgl/api/v3/maintainList?key=android&userid=1" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        NSLog(@"downloadProgress");
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSArray *dictArray = responseObject[@"ret"];
+        
+        NSMutableArray *manageArray = [NSMutableArray array];
+        
+        for (NSDictionary *dict in dictArray) {
+            ManageInfo *manage = [ManageInfo manageWithDict:dict];
+            [manageArray addObject:manage];
+        }
+        self.manages = manageArray;
+        
+        [self.tableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"网络请求失败");
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,24 +65,29 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.manages.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+//    static NSString *manageID = @"manage";
+//    ManageInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:manageID];
+//    if (cell == nil) {
+//        cell = [[[NSBundle mainBundle] loadNibNamed:@"ManageInfoCell" owner:nil options:nil] lastObject];
+//    }
+//    ManageInfo *manage = self.manages[indexPath.row];
+//    
+//    cell.manage = manage;
     
-    // Configure the cell...
+    ManageInfoCell *cell = [ManageInfoCell setTableView:tableView ManageInfoCell:self.manages[indexPath.row]];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
