@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) RepairInfo *repair;
 
++ (RepairInfoCell *) setTableView:(UITableView *)tableView RepairInfoCell:(RepairInfo *)repair;
+
 @end

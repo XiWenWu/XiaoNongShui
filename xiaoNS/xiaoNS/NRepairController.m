@@ -81,17 +81,18 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellID = @"repair";
-    
-    RepairInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    
-    if (cell == nil) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"RepairInfoCell" owner:nil options:nil] lastObject];
-    }
-    // 获得模型数据
-    RepairInfo *repair = self.repairs[indexPath.row];
-    // 导入模型数据
-    cell.repair = repair;
+//    static NSString *cellID = @"repair";
+//    
+//    RepairInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+//    
+//    if (cell == nil) {
+//        cell = [[[NSBundle mainBundle] loadNibNamed:@"RepairInfoCell" owner:nil options:nil] lastObject];
+//    }
+//    // 获得模型数据
+//    RepairInfo *repair = self.repairs[indexPath.row];
+//    // 导入模型数据
+//    cell.repair = repair;
+    RepairInfoCell *cell = [RepairInfoCell setTableView:tableView RepairInfoCell:self.repairs[indexPath.row]];
     
     return cell;
 }

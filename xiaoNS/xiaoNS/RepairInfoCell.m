@@ -50,4 +50,15 @@
     
 }
 
++ (RepairInfoCell *)setTableView:(UITableView *)tableView RepairInfoCell:(RepairInfo *)repair {
+    static NSString *repairID = @"repair";
+    RepairInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:repairID];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"RepairInfoCell" owner:nil options:nil] lastObject];
+    }
+    cell.repair = repair;
+    
+    return cell;
+}
+
 @end
