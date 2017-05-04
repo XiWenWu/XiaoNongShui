@@ -54,11 +54,11 @@
 */
 
 - (IBAction)login {
-    if (![self.accountField.text isEqualToString:@"123456"]) {
+    if (![self.accountField.text isEqualToString:@"123"]) {
         [MBProgressHUD showError:@"账号错误"];
         return;
     }
-    if (![self.pwdField.text isEqualToString:@"123456"]) {
+    if (![self.pwdField.text isEqualToString:@"123"]) {
         [MBProgressHUD showError:@"密码错误"];
         return;
     }

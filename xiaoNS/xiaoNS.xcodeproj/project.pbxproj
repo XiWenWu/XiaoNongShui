@@ -11,6 +11,9 @@
 		9C74BEAC1EB0A3AE00A70185 /* NNavRepairController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C74BEAB1EB0A3AE00A70185 /* NNavRepairController.m */; };
 		9C74BEAF1EB0A3C600A70185 /* NNavWorkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C74BEAE1EB0A3C600A70185 /* NNavWorkController.m */; };
 		9C74BEB21EB0A3D700A70185 /* NNavHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C74BEB11EB0A3D700A70185 /* NNavHomeController.m */; };
+		9C82F1A41EBAB8880024B3B1 /* RepairInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C82F1A31EBAB8880024B3B1 /* RepairInfo.m */; };
+		9C82F1A81EBAB8C60024B3B1 /* RepairInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C82F1A61EBAB8C60024B3B1 /* RepairInfoCell.m */; };
+		9C82F1A91EBAB8C60024B3B1 /* RepairInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C82F1A71EBAB8C60024B3B1 /* RepairInfoCell.xib */; };
 		9CB088CE1EB1C6BF002E5D50 /* NHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB088CC1EB1C6BF002E5D50 /* NHomeController.m */; };
 		9CB088CF1EB1C6BF002E5D50 /* NHomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB088CD1EB1C6BF002E5D50 /* NHomeController.xib */; };
 		9CB088F91EB1EFF7002E5D50 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB088D21EB1EFF7002E5D50 /* AFHTTPSessionManager.m */; };
@@ -75,6 +78,11 @@
 		9C74BEAE1EB0A3C600A70185 /* NNavWorkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNavWorkController.m; sourceTree = "<group>"; };
 		9C74BEB01EB0A3D700A70185 /* NNavHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNavHomeController.h; sourceTree = "<group>"; };
 		9C74BEB11EB0A3D700A70185 /* NNavHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNavHomeController.m; sourceTree = "<group>"; };
+		9C82F1A21EBAB8880024B3B1 /* RepairInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepairInfo.h; sourceTree = "<group>"; };
+		9C82F1A31EBAB8880024B3B1 /* RepairInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepairInfo.m; sourceTree = "<group>"; };
+		9C82F1A51EBAB8C60024B3B1 /* RepairInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepairInfoCell.h; sourceTree = "<group>"; };
+		9C82F1A61EBAB8C60024B3B1 /* RepairInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepairInfoCell.m; sourceTree = "<group>"; };
+		9C82F1A71EBAB8C60024B3B1 /* RepairInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepairInfoCell.xib; sourceTree = "<group>"; };
 		9CB088CB1EB1C6BF002E5D50 /* NHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHomeController.h; sourceTree = "<group>"; };
 		9CB088CC1EB1C6BF002E5D50 /* NHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHomeController.m; sourceTree = "<group>"; };
 		9CB088CD1EB1C6BF002E5D50 /* NHomeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NHomeController.xib; sourceTree = "<group>"; };
@@ -354,6 +362,11 @@
 				9CD0DFDB1EB2DA8B00299212 /* WorkInfoCell.h */,
 				9CD0DFDC1EB2DA8B00299212 /* WorkInfoCell.m */,
 				9CD0DFDD1EB2DA8B00299212 /* WorkInfoCell.xib */,
+				9C82F1A21EBAB8880024B3B1 /* RepairInfo.h */,
+				9C82F1A31EBAB8880024B3B1 /* RepairInfo.m */,
+				9C82F1A51EBAB8C60024B3B1 /* RepairInfoCell.h */,
+				9C82F1A61EBAB8C60024B3B1 /* RepairInfoCell.m */,
+				9C82F1A71EBAB8C60024B3B1 /* RepairInfoCell.xib */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -540,6 +553,7 @@
 			files = (
 				9CF75D801EB03E8A00F7112D /* NLoginController.xib in Resources */,
 				9CF75D3F1EB038D000F7112D /* LaunchScreen.storyboard in Resources */,
+				9C82F1A91EBAB8C60024B3B1 /* RepairInfoCell.xib in Resources */,
 				9CF75D3C1EB038D000F7112D /* Assets.xcassets in Resources */,
 				9CD0DFDF1EB2DA8B00299212 /* WorkInfoCell.xib in Resources */,
 				9CF75D3A1EB038D000F7112D /* Main.storyboard in Resources */,
@@ -591,10 +605,12 @@
 				9CF75D911EB0450B00F7112D /* NRepairController.m in Sources */,
 				9CF75D341EB038D000F7112D /* AppDelegate.m in Sources */,
 				9CB0890D1EB1F6A2002E5D50 /* WorksInfo.m in Sources */,
+				9C82F1A41EBAB8880024B3B1 /* RepairInfo.m in Sources */,
 				9CB088FD1EB1EFF7002E5D50 /* AFURLResponseSerialization.m in Sources */,
 				9CB088FA1EB1EFF7002E5D50 /* AFNetworkReachabilityManager.m in Sources */,
 				9CB089091EB1EFF7002E5D50 /* UIRefreshControl+AFNetworking.m in Sources */,
 				9CB089081EB1EFF7002E5D50 /* UIProgressView+AFNetworking.m in Sources */,
+				9C82F1A81EBAB8C60024B3B1 /* RepairInfoCell.m in Sources */,
 				9C74BEB21EB0A3D700A70185 /* NNavHomeController.m in Sources */,
 				9CB0890A1EB1EFF7002E5D50 /* UIWebView+AFNetworking.m in Sources */,
 				9CF75D311EB038D000F7112D /* main.m in Sources */,

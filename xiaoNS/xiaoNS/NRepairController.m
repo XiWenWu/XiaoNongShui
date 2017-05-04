@@ -5,10 +5,18 @@
 //  Created by 希文 on 2017/4/26.
 //  Copyright © 2017年 xiwen. All rights reserved.
 //
-
+// 导入控制器
 #import "NRepairController.h"
+// 导入工具
+#import "AFHTTPSessionManager.h"
+// 导入模型
+#import "RepairInfo.h"
+#import "RepairInfoCell.h"
+
 
 @interface NRepairController ()
+
+@property (nonatomic, strong) NSArray *repairs;
 
 @end
 
@@ -16,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.rowHeight = 60;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -23,34 +32,70 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"维修";
+    // 初始化维修数据
+    [self setRepairs];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setRepairs {
+    // 创建网络请求对象
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    // 发送请求
+    [manager GET:@"http://www.cloudowr.com:8801/nsgcgl/api/v3/maintainList?key=android&userid=1" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        // 接收网络请求返回的数据
+        NSArray *dictArray = responseObject[@"ret"];
+        // 新建一个可变数组
+        NSMutableArray *repairArray = [NSMutableArray array];
+        // 将字典数据转为模型
+        for (NSDictionary *dict in dictArray) {
+            RepairInfo *repair = [RepairInfo repairWithDict:dict];
+            
+            [repairArray addObject:repair];
+        }
+        self.repairs = repairArray;
+        
+        [self.tableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"网络请求失败");
+    }];
+     
 }
+
+//- (void)didReceiveMemoryWarning {
+//    [super didReceiveMemoryWarning];
+//    // Dispose of any resources that can be recreated.
+//}
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.repairs.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *cellID = @"repair";
     
-    // Configure the cell...
+    RepairInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"RepairInfoCell" owner:nil options:nil] lastObject];
+    }
+    // 获得模型数据
+    RepairInfo *repair = self.repairs[indexPath.row];
+    // 导入模型数据
+    cell.repair = repair;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
