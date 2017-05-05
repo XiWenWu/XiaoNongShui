@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationBar.backgroundColor = [UIColor blueColor];
     // Do any additional setup after loading the view.
     NHomeController *home = [[NHomeController alloc] init];
     
