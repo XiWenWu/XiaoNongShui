@@ -24,6 +24,8 @@
 #import "WorkInfoCell.h"
 #import "WorksInfo.h"
 
+#import "UIImageView+WebCache.h"
+
 @interface WorkInfoCell ()
 @property (weak, nonatomic) IBOutlet UILabel *projectName;
 @property (weak, nonatomic) IBOutlet UIImageView *img;
@@ -51,7 +53,8 @@
 - (void)setWork:(WorksInfo *)work {
     _work = work;
     self.projectName.text = work.projectName;
-    self.img.image        = [UIImage imageNamed:work.img];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cloudowr.oss-cn-hangzhou.aliyuncs.com/nsgcgl/420921/%@?x-oss-process=style/thumb_100_100", self.work.img]];
+    [self.img sd_setImageWithURL:url];
     self.abcd.text        = work.abcd;
     self.address.text     = work.address;
     self.person.text      = work.person;

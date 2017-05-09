@@ -12,7 +12,11 @@
 #import "NRepairRecordController.h"
 #import "NManageRecordController.h"
 
+#import "AFHTTPSessionManager.h"
+
 @interface NSubWorkController ()
+
+@property (nonatomic, strong) NSArray *subWorkInfos;
 
 @end
 
@@ -22,6 +26,7 @@ static CGFloat const labelH = 44;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setSubWorkInfos];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor purpleColor];
     self.title = @"详情";
@@ -38,6 +43,32 @@ static CGFloat const labelH = 44;
     [self setUpChildViewController];
     //
     [self setUpTitleLabel:hView];
+}
+
+- (void)setSubWorkInfos {
+    // 网络请求
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    //
+    [manager GET:self.subWorkUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        NSLog(@"downloadProgress");
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@", responseObject);
+//        NSArray *dictArray = responseObject[@"ret"];
+//        
+//        NSMutableArray *manageArray = [NSMutableArray array];
+//        
+//        for (NSDictionary *dict in dictArray) {
+//            ManageInfo *manage = [ManageInfo manageWithDict:dict];
+//            [manageArray addObject:manage];
+//        }
+//        self.manages = manageArray;
+//        
+//        [self.tableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"网络请求失败");
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning {

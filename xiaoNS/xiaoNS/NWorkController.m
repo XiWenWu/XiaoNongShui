@@ -101,6 +101,10 @@
     // 通过模型传递子界面数据
     // 隐藏tabbar
     self.hidesBottomBarWhenPushed = YES;
+    //
+    WorksInfo *work = self.works[indexPath.row];
+    NSString *subWorkUrl = [NSString stringWithFormat:@"http://www.cloudowr.com:8801/nsgcgl/api/v3/projectDetail?key=android&id=%@&proindex=%@", work.ID, work.proindex];
+    subWork.subWorkUrl = subWorkUrl;
     // 界面跳转
     [self.navigationController pushViewController:subWork animated:YES];
     // 显示tabbar

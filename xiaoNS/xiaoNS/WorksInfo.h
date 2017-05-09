@@ -21,6 +21,11 @@
 @property (nonatomic, copy) NSString *address;
 /**项目地址*/
 @property (nonatomic, copy) NSString *projectName;
+/**id*/
+@property (nonatomic, copy) NSString *ID;
+/**proindex*/
+@property (nonatomic, copy) NSString *proindex;
+
 
 - (instancetype) initWithDict:(NSDictionary *)dict;
 + (instancetype) workWithDict:(NSDictionary *)dict;
