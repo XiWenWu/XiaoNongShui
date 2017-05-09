@@ -12,5 +12,7 @@
 @interface WorkInfoCell : UITableViewCell
 /** 单个cell模型数据 */
 @property (nonatomic, strong) WorksInfo *work;
+/** 封装cell */
++ (WorkInfoCell *)setWorkInfoCell:(WorksInfo *)work ForTableView:(UITableView *)tableView;
 
 @end

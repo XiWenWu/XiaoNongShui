@@ -59,4 +59,22 @@
     
 }
 
++ (WorkInfoCell *)setWorkInfoCell:(WorksInfo *)work ForTableView:(UITableView *)tableView {
+    static NSString *workID = @"work";
+    WorkInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:workID];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"WorkInfoCell" owner:nil options:nil] lastObject];
+    }
+    cell.work = work;
+    return cell;
+}
+
 @end
+
+
+
+
+
+
+
+

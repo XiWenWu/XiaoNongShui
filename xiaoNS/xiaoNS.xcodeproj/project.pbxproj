@@ -38,6 +38,11 @@
 		9CB089531EB1FE0C002E5D50 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB0894F1EB1FE0C002E5D50 /* MBProgressHUD+MJ.m */; };
 		9CB089541EB1FE0C002E5D50 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9CB089501EB1FE0C002E5D50 /* MBProgressHUD.bundle */; };
 		9CB089551EB1FE0C002E5D50 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB089521EB1FE0C002E5D50 /* MBProgressHUD.m */; };
+		9CB4C2201EBC714000180A48 /* NSubWorkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4C21F1EBC714000180A48 /* NSubWorkController.m */; };
+		9CB4C2231EBC728D00180A48 /* NBaseInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4C2221EBC728D00180A48 /* NBaseInfoController.m */; };
+		9CB4C2261EBC72AD00180A48 /* NPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4C2251EBC72AD00180A48 /* NPictureController.m */; };
+		9CB4C2291EBC72FF00180A48 /* NRepairRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4C2281EBC72FF00180A48 /* NRepairRecordController.m */; };
+		9CB4C22C1EBC732D00180A48 /* NManageRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4C22B1EBC732D00180A48 /* NManageRecordController.m */; };
 		9CD0DFDE1EB2DA8B00299212 /* WorkInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0DFDC1EB2DA8B00299212 /* WorkInfoCell.m */; };
 		9CD0DFDF1EB2DA8B00299212 /* WorkInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD0DFDD1EB2DA8B00299212 /* WorkInfoCell.xib */; };
 		9CF75D311EB038D000F7112D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D301EB038D000F7112D /* main.m */; };
@@ -134,6 +139,16 @@
 		9CB089501EB1FE0C002E5D50 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		9CB089511EB1FE0C002E5D50 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		9CB089521EB1FE0C002E5D50 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		9CB4C21E1EBC714000180A48 /* NSubWorkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSubWorkController.h; sourceTree = "<group>"; };
+		9CB4C21F1EBC714000180A48 /* NSubWorkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSubWorkController.m; sourceTree = "<group>"; };
+		9CB4C2211EBC728D00180A48 /* NBaseInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBaseInfoController.h; sourceTree = "<group>"; };
+		9CB4C2221EBC728D00180A48 /* NBaseInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBaseInfoController.m; sourceTree = "<group>"; };
+		9CB4C2241EBC72AD00180A48 /* NPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPictureController.h; sourceTree = "<group>"; };
+		9CB4C2251EBC72AD00180A48 /* NPictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPictureController.m; sourceTree = "<group>"; };
+		9CB4C2271EBC72FF00180A48 /* NRepairRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRepairRecordController.h; sourceTree = "<group>"; };
+		9CB4C2281EBC72FF00180A48 /* NRepairRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRepairRecordController.m; sourceTree = "<group>"; };
+		9CB4C22A1EBC732D00180A48 /* NManageRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NManageRecordController.h; sourceTree = "<group>"; };
+		9CB4C22B1EBC732D00180A48 /* NManageRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NManageRecordController.m; sourceTree = "<group>"; };
 		9CD0DFDB1EB2DA8B00299212 /* WorkInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkInfoCell.h; sourceTree = "<group>"; };
 		9CD0DFDC1EB2DA8B00299212 /* WorkInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkInfoCell.m; sourceTree = "<group>"; };
 		9CD0DFDD1EB2DA8B00299212 /* WorkInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkInfoCell.xib; sourceTree = "<group>"; };
@@ -256,6 +271,23 @@
 			);
 			name = MBProgressHUD;
 			path = ../../tools/MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		9CB4C21D1EBC704100180A48 /* subWork */ = {
+			isa = PBXGroup;
+			children = (
+				9CB4C21E1EBC714000180A48 /* NSubWorkController.h */,
+				9CB4C21F1EBC714000180A48 /* NSubWorkController.m */,
+				9CB4C2211EBC728D00180A48 /* NBaseInfoController.h */,
+				9CB4C2221EBC728D00180A48 /* NBaseInfoController.m */,
+				9CB4C2241EBC72AD00180A48 /* NPictureController.h */,
+				9CB4C2251EBC72AD00180A48 /* NPictureController.m */,
+				9CB4C2271EBC72FF00180A48 /* NRepairRecordController.h */,
+				9CB4C2281EBC72FF00180A48 /* NRepairRecordController.m */,
+				9CB4C22A1EBC732D00180A48 /* NManageRecordController.h */,
+				9CB4C22B1EBC732D00180A48 /* NManageRecordController.m */,
+			);
+			name = subWork;
 			sourceTree = "<group>";
 		};
 		9CF75D231EB038D000F7112D = {
@@ -429,6 +461,7 @@
 				9C74BEAE1EB0A3C600A70185 /* NNavWorkController.m */,
 				9CF75D8A1EB044B500F7112D /* NWorkController.h */,
 				9CF75D8B1EB044B500F7112D /* NWorkController.m */,
+				9CB4C21D1EBC704100180A48 /* subWork */,
 			);
 			name = work;
 			sourceTree = "<group>";
@@ -598,11 +631,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB089531EB1FE0C002E5D50 /* MBProgressHUD+MJ.m in Sources */,
+				9CB4C2231EBC728D00180A48 /* NBaseInfoController.m in Sources */,
 				9CF75D841EB03F4600F7112D /* NTabBarController.m in Sources */,
+				9CB4C2261EBC72AD00180A48 /* NPictureController.m in Sources */,
 				9CB089071EB1EFF7002E5D50 /* UIImageView+AFNetworking.m in Sources */,
 				9CB089061EB1EFF7002E5D50 /* UIButton+AFNetworking.m in Sources */,
 				9CB088FB1EB1EFF7002E5D50 /* AFSecurityPolicy.m in Sources */,
 				9CB088CE1EB1C6BF002E5D50 /* NHomeController.m in Sources */,
+				9CB4C2291EBC72FF00180A48 /* NRepairRecordController.m in Sources */,
 				9CF75D8C1EB044B500F7112D /* NWorkController.m in Sources */,
 				9CB089551EB1FE0C002E5D50 /* MBProgressHUD.m in Sources */,
 				9C74BEA91EB0A36900A70185 /* NNavManageController.m in Sources */,
@@ -616,6 +652,7 @@
 				9CB089021EB1EFF7002E5D50 /* AFAutoPurgingImageCache.m in Sources */,
 				9C74BEAC1EB0A3AE00A70185 /* NNavRepairController.m in Sources */,
 				9C82F1AC1EBACB320024B3B1 /* ManageInfo.m in Sources */,
+				9CB4C22C1EBC732D00180A48 /* NManageRecordController.m in Sources */,
 				9CD0DFDE1EB2DA8B00299212 /* WorkInfoCell.m in Sources */,
 				9CF75D911EB0450B00F7112D /* NRepairController.m in Sources */,
 				9CF75D341EB038D000F7112D /* AppDelegate.m in Sources */,
@@ -631,6 +668,7 @@
 				9CB0890A1EB1EFF7002E5D50 /* UIWebView+AFNetworking.m in Sources */,
 				9CF75D311EB038D000F7112D /* main.m in Sources */,
 				9CB088F91EB1EFF7002E5D50 /* AFHTTPSessionManager.m in Sources */,
+				9CB4C2201EBC714000180A48 /* NSubWorkController.m in Sources */,
 				9CB089031EB1EFF7002E5D50 /* AFImageDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

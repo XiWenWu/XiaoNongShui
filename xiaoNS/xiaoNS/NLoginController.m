@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //
-    self.loginBtn.enabled = NO;
+    self.loginBtn.enabled = YES;
     // 设置监听
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChange) name:UITextFieldTextDidChangeNotification object:self.accountField];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChange) name:UITextFieldTextDidChangeNotification object:self.pwdField];
@@ -54,14 +54,14 @@
 */
 
 - (IBAction)login {
-    if (![self.accountField.text isEqualToString:@"123"]) {
-        [MBProgressHUD showError:@"账号错误"];
-        return;
-    }
-    if (![self.pwdField.text isEqualToString:@"123"]) {
-        [MBProgressHUD showError:@"密码错误"];
-        return;
-    }
+//    if (![self.accountField.text isEqualToString:@"123"]) {
+//        [MBProgressHUD showError:@"账号错误"];
+//        return;
+//    }
+//    if (![self.pwdField.text isEqualToString:@"123"]) {
+//        [MBProgressHUD showError:@"密码错误"];
+//        return;
+//    }
     [MBProgressHUD showMessage:@"正在登录..."];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [MBProgressHUD hideHUD];

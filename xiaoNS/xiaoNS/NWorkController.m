@@ -7,6 +7,7 @@
 //
 // 导入控制器
 #import "NWorkController.h"
+#import "NSubWorkController.h"
 // 导入工具
 #import "AFHTTPSessionManager.h"
 // 导入模型
@@ -81,17 +82,31 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *Cid = @"wicell";
-    WorkInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:Cid];
-    if (cell == nil) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"WorkInfoCell" owner:nil options:nil] lastObject];
-    }
-    WorksInfo *info = self.works[indexPath.row];
-    cell.work = info;
+    WorkInfoCell *cell = [WorkInfoCell setWorkInfoCell:self.works[indexPath.row] ForTableView:tableView];
+//    static NSString *Cid = @"wicell";
+//    WorkInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:Cid];
+//    if (cell == nil) {
+//        cell = [[[NSBundle mainBundle] loadNibNamed:@"WorkInfoCell" owner:nil options:nil] lastObject];
+//    }
+//    WorksInfo *info = self.works[indexPath.row];
+//    cell.work = info;
     
     return cell;
 }
-
+/** 点击cell跳转页面 */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 获取点击cell的模型
+    // 创建要传递的子界面
+    NSubWorkController *subWork = [[NSubWorkController alloc] init];
+    // 通过模型传递子界面数据
+    // 隐藏tabbar
+    self.hidesBottomBarWhenPushed = YES;
+    // 界面跳转
+    [self.navigationController pushViewController:subWork animated:YES];
+    // 显示tabbar
+    self.hidesBottomBarWhenPushed = NO;
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
