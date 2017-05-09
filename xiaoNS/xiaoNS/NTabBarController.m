@@ -33,12 +33,19 @@
     
     NNavHomeController *navHome = [[NNavHomeController alloc] init];
     navHome.tabBarItem.title = @"首页";
+    navHome.tabBarItem.image = [UIImage imageNamed:@"title001"];
+    
     NNavWorkController *navWork = [[NNavWorkController alloc] init];
     navWork.tabBarItem.title = @"工程";
+    navWork.tabBarItem.image = [UIImage imageNamed:@"title002"];
+    
     NNavRepairController *navRepair = [[NNavRepairController alloc] init];
     navRepair.tabBarItem.title = @"维修";
+    navRepair.tabBarItem.image = [UIImage imageNamed:@"title003"];
+    
     NNavManageController *navManage = [[NNavManageController alloc] init];
     navManage.tabBarItem.title = @"管护";
+    navManage.tabBarItem.image = [UIImage imageNamed:@"title004"];
     
     
     self.viewControllers = @[navHome, navWork, navRepair, navManage];
