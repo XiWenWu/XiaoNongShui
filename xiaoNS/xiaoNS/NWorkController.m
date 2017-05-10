@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 设置导航栏的背景颜色
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:51.0/255 green:120.0/255 blue:1 alpha:1];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:51.0/255 green:120.0/255 blue:1.0 alpha:1];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -34,7 +34,10 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"工程";
-    self.tableView.rowHeight = 130;
+    self.tableView.rowHeight = 135;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, WorkInfoCellBorder, 0);
+    self.tableView.separatorStyle = NO;
+    self.tableView.backgroundColor = [UIColor colorWithRed:220.0/255 green:220.0/255 blue:220.0/255 alpha:1];
     // 通过网络请求获取数据
     [self setUpWorks];
 }
@@ -46,7 +49,7 @@
     [manger GET:@"http://www.cloudowr.com:8801/nsgcgl/api/v3/projectList?key=android&userid=1" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@", responseObject[@"ret"][@"list"]);
+        // NSLog(@"%@", responseObject[@"ret"][@"list"]);
         // 获取数据
         NSArray *dictArray = responseObject[@"ret"][@"list"];
         // 将字典数据转为模型数据

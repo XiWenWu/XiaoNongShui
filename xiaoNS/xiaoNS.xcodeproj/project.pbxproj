@@ -64,10 +64,11 @@
 		9CB4C22C1EBC732D00180A48 /* NManageRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4C22B1EBC732D00180A48 /* NManageRecordController.m */; };
 		9CD0DFDE1EB2DA8B00299212 /* WorkInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0DFDC1EB2DA8B00299212 /* WorkInfoCell.m */; };
 		9CD0DFDF1EB2DA8B00299212 /* WorkInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD0DFDD1EB2DA8B00299212 /* WorkInfoCell.xib */; };
+		9CDEF8E61EC2B1DD0089F184 /* UIImage+XW.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDEF8E51EC2B1DD0089F184 /* UIImage+XW.m */; };
+		9CDEF8E81EC2EED70089F184 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CDEF8E71EC2EED70089F184 /* Assets.xcassets */; };
 		9CF75D311EB038D000F7112D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D301EB038D000F7112D /* main.m */; };
 		9CF75D341EB038D000F7112D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D331EB038D000F7112D /* AppDelegate.m */; };
 		9CF75D3A1EB038D000F7112D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF75D381EB038D000F7112D /* Main.storyboard */; };
-		9CF75D3C1EB038D000F7112D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF75D3B1EB038D000F7112D /* Assets.xcassets */; };
 		9CF75D3F1EB038D000F7112D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF75D3D1EB038D000F7112D /* LaunchScreen.storyboard */; };
 		9CF75D4A1EB038D100F7112D /* xiaoNSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D491EB038D100F7112D /* xiaoNSTests.m */; };
 		9CF75D551EB038D100F7112D /* xiaoNSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D541EB038D100F7112D /* xiaoNSUITests.m */; };
@@ -210,12 +211,14 @@
 		9CD0DFDB1EB2DA8B00299212 /* WorkInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkInfoCell.h; sourceTree = "<group>"; };
 		9CD0DFDC1EB2DA8B00299212 /* WorkInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkInfoCell.m; sourceTree = "<group>"; };
 		9CD0DFDD1EB2DA8B00299212 /* WorkInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkInfoCell.xib; sourceTree = "<group>"; };
+		9CDEF8E41EC2B1DD0089F184 /* UIImage+XW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XW.h"; sourceTree = "<group>"; };
+		9CDEF8E51EC2B1DD0089F184 /* UIImage+XW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XW.m"; sourceTree = "<group>"; };
+		9CDEF8E71EC2EED70089F184 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CF75D2C1EB038D000F7112D /* xiaoNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xiaoNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF75D301EB038D000F7112D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CF75D321EB038D000F7112D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9CF75D331EB038D000F7112D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9CF75D391EB038D000F7112D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9CF75D3B1EB038D000F7112D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CF75D3E1EB038D000F7112D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CF75D401EB038D000F7112D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CF75D451EB038D100F7112D /* xiaoNSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xiaoNSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -395,6 +398,15 @@
 			name = subWork;
 			sourceTree = "<group>";
 		};
+		9CDEF8E01EC2ACF80089F184 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				9CDEF8E41EC2B1DD0089F184 /* UIImage+XW.h */,
+				9CDEF8E51EC2B1DD0089F184 /* UIImage+XW.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		9CF75D231EB038D000F7112D = {
 			isa = PBXGroup;
 			children = (
@@ -424,7 +436,7 @@
 				9CF75D321EB038D000F7112D /* AppDelegate.h */,
 				9CF75D331EB038D000F7112D /* AppDelegate.m */,
 				9CF75D381EB038D000F7112D /* Main.storyboard */,
-				9CF75D3B1EB038D000F7112D /* Assets.xcassets */,
+				9CDEF8E71EC2EED70089F184 /* Assets.xcassets */,
 				9CF75D3D1EB038D000F7112D /* LaunchScreen.storyboard */,
 				9CF75D401EB038D000F7112D /* Info.plist */,
 				9CF75D2F1EB038D000F7112D /* Supporting Files */,
@@ -478,6 +490,7 @@
 		9CF75D641EB03C5700F7112D /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				9CDEF8E01EC2ACF80089F184 /* Category */,
 				9C6648681EC18A59001914BD /* SDWebImage */,
 				9CB0894D1EB1FE0C002E5D50 /* MBProgressHUD */,
 				9CB088D01EB1EFF7002E5D50 /* AFNetworking */,
@@ -706,11 +719,11 @@
 				9CF75D801EB03E8A00F7112D /* NLoginController.xib in Resources */,
 				9CF75D3F1EB038D000F7112D /* LaunchScreen.storyboard in Resources */,
 				9C82F1A91EBAB8C60024B3B1 /* RepairInfoCell.xib in Resources */,
-				9CF75D3C1EB038D000F7112D /* Assets.xcassets in Resources */,
 				9CD0DFDF1EB2DA8B00299212 /* WorkInfoCell.xib in Resources */,
 				9CF75D3A1EB038D000F7112D /* Main.storyboard in Resources */,
 				9C82F1B11EBACB660024B3B1 /* ManageInfoCell.xib in Resources */,
 				9CB088CF1EB1C6BF002E5D50 /* NHomeController.xib in Resources */,
+				9CDEF8E81EC2EED70089F184 /* Assets.xcassets in Resources */,
 				9CB089541EB1FE0C002E5D50 /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -786,6 +799,7 @@
 				9C6648981EC18A5A001914BD /* SDImageCacheConfig.m in Sources */,
 				9CB089081EB1EFF7002E5D50 /* UIProgressView+AFNetworking.m in Sources */,
 				9C82F1A81EBAB8C60024B3B1 /* RepairInfoCell.m in Sources */,
+				9CDEF8E61EC2B1DD0089F184 /* UIImage+XW.m in Sources */,
 				9C74BEB21EB0A3D700A70185 /* NNavHomeController.m in Sources */,
 				9C6648A61EC18A5A001914BD /* UIView+WebCacheOperation.m in Sources */,
 				9CB0890A1EB1EFF7002E5D50 /* UIWebView+AFNetworking.m in Sources */,
