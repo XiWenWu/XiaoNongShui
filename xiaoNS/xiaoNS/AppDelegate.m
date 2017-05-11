@@ -21,7 +21,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyWindow];
     self.window.rootViewController = [[NLoginController alloc] init];
-    
+
     return YES;
 }
 
