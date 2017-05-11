@@ -12,7 +12,7 @@
 
 - (instancetype)initWithDict:(NSDictionary *)dict {
     if (self = [super init]) {
-        self.data   = dict[@"dict"];
+        self.date   = dict[@"date"];
         self.name   = dict[@"name"];
         self.ID     = [dict[@"id"] intValue];
         self.status = [dict[@"status"] intValue];

@@ -8,7 +8,12 @@
 
 #import "NRepairRecordController.h"
 
+#import "subRepair.h"
+#import "subRepairCell.h"
+
 @interface NRepairRecordController ()
+
+@property (nonatomic, strong) NSArray *subRepairs;
 
 @end
 
@@ -16,6 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.rowHeight = 60;
+    [self setSubRepairs];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -23,6 +30,16 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     NSLog(@"%@", self.repair);
+}
+
+- (void)setSubRepairs {
+    NSMutableArray *dictArray = [NSMutableArray array];
+    NSDictionary *subRepairDict = self.repair;
+    for (NSDictionary *dict in subRepairDict) {
+        subRepair *repair = [subRepair subRepairWithDict:dict];
+        [dictArray addObject:repair];
+    }
+    self.subRepairs = dictArray;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,23 +51,27 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.subRepairs.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    static NSString *subRepairID = @"subRepairID";
+    subRepairCell *cell = [tableView dequeueReusableCellWithIdentifier:subRepairID];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"subRepairCell" owner:nil options:nil] lastObject];
+    }
+    subRepair *repair = self.subRepairs[indexPath.row];
+    cell.repair = repair;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -63,6 +63,8 @@
 		9CB3A68A1EC3F78D00B13149 /* subManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB3A6891EC3F78D00B13149 /* subManage.m */; };
 		9CB3A68E1EC414E600B13149 /* subManageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB3A68C1EC414E600B13149 /* subManageCell.m */; };
 		9CB3A68F1EC414E600B13149 /* subManageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB3A68D1EC414E600B13149 /* subManageCell.xib */; };
+		9CB3A6931EC4470700B13149 /* subRepairCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB3A6911EC4470700B13149 /* subRepairCell.m */; };
+		9CB3A6941EC4470700B13149 /* subRepairCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB3A6921EC4470700B13149 /* subRepairCell.xib */; };
 		9CB4C2201EBC714000180A48 /* NSubWorkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4C21F1EBC714000180A48 /* NSubWorkController.m */; };
 		9CB4C2231EBC728D00180A48 /* NBaseInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4C2221EBC728D00180A48 /* NBaseInfoController.m */; };
 		9CB4C2261EBC72AD00180A48 /* NPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4C2251EBC72AD00180A48 /* NPictureController.m */; };
@@ -215,6 +217,9 @@
 		9CB3A68B1EC414E600B13149 /* subManageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subManageCell.h; sourceTree = "<group>"; };
 		9CB3A68C1EC414E600B13149 /* subManageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = subManageCell.m; sourceTree = "<group>"; };
 		9CB3A68D1EC414E600B13149 /* subManageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = subManageCell.xib; sourceTree = "<group>"; };
+		9CB3A6901EC4470700B13149 /* subRepairCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subRepairCell.h; sourceTree = "<group>"; };
+		9CB3A6911EC4470700B13149 /* subRepairCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = subRepairCell.m; sourceTree = "<group>"; };
+		9CB3A6921EC4470700B13149 /* subRepairCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = subRepairCell.xib; sourceTree = "<group>"; };
 		9CB4C21E1EBC714000180A48 /* NSubWorkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSubWorkController.h; sourceTree = "<group>"; };
 		9CB4C21F1EBC714000180A48 /* NSubWorkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSubWorkController.m; sourceTree = "<group>"; };
 		9CB4C2211EBC728D00180A48 /* NBaseInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBaseInfoController.h; sourceTree = "<group>"; };
@@ -408,6 +413,9 @@
 				9CB3A6831EC3F75E00B13149 /* subPicture.m */,
 				9CB3A6851EC3F77C00B13149 /* subRepair.h */,
 				9CB3A6861EC3F77C00B13149 /* subRepair.m */,
+				9CB3A6901EC4470700B13149 /* subRepairCell.h */,
+				9CB3A6911EC4470700B13149 /* subRepairCell.m */,
+				9CB3A6921EC4470700B13149 /* subRepairCell.xib */,
 				9CB3A6881EC3F78D00B13149 /* subManage.h */,
 				9CB3A6891EC3F78D00B13149 /* subManage.m */,
 				9CB3A68B1EC414E600B13149 /* subManageCell.h */,
@@ -754,6 +762,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB3A6941EC4470700B13149 /* subRepairCell.xib in Resources */,
 				9CF75D801EB03E8A00F7112D /* NLoginController.xib in Resources */,
 				9CF75D3F1EB038D000F7112D /* LaunchScreen.storyboard in Resources */,
 				9C82F1A91EBAB8C60024B3B1 /* RepairInfoCell.xib in Resources */,
@@ -841,6 +850,7 @@
 				9CB089091EB1EFF7002E5D50 /* UIRefreshControl+AFNetworking.m in Sources */,
 				9C6648981EC18A5A001914BD /* SDImageCacheConfig.m in Sources */,
 				9CB089081EB1EFF7002E5D50 /* UIProgressView+AFNetworking.m in Sources */,
+				9CB3A6931EC4470700B13149 /* subRepairCell.m in Sources */,
 				9C82F1A81EBAB8C60024B3B1 /* RepairInfoCell.m in Sources */,
 				9CDEF8E61EC2B1DD0089F184 /* UIImage+XW.m in Sources */,
 				9C74BEB21EB0A3D700A70185 /* NNavHomeController.m in Sources */,
@@ -1003,6 +1013,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8756Z6L8HE;
 				INFOPLIST_FILE = xiaoNS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-79712908.xiaoNS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1015,6 +1026,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8756Z6L8HE;
 				INFOPLIST_FILE = xiaoNS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-79712908.xiaoNS";
 				PRODUCT_NAME = "$(TARGET_NAME)";

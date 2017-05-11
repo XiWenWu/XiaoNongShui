@@ -17,7 +17,7 @@
 
 @interface subRepair : NSObject
 
-@property (nonatomic, copy) NSString *data;
+@property (nonatomic, copy) NSString *date;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) NSInteger ID;
 @property (nonatomic, assign) NSInteger status;
