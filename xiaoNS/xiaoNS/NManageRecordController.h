@@ -10,4 +10,6 @@
 
 @interface NManageRecordController : UITableViewController
 
+@property (nonatomic, strong) NSDictionary *maintain;
+
 @end

@@ -10,4 +10,6 @@
 
 @interface NSubWorkController : UIViewController
 
+@property (nonatomic, strong) NSString *subWorkUrl;
+
 @end

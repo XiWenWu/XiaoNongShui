@@ -10,4 +10,6 @@
 
 @interface NRepairRecordController : UITableViewController
 
+@property (nonatomic, strong) NSDictionary *repair;
+
 @end

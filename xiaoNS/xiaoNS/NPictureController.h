@@ -10,4 +10,6 @@
 
 @interface NPictureController : UIViewController
 
+@property (nonatomic, strong) NSDictionary *imgs;
+
 @end

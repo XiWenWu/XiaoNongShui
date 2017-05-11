@@ -21,13 +21,16 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cud-Ag-7n7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rCS-Ok-tQs">
+                        <rect key="frame" x="0.0" y="40" width="375" height="90"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FD3-fq-ujV">
                         <rect key="frame" x="10" y="45" width="80" height="80"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="error.png" translatesAutoresizingMaskIntoConstraints="NO" id="ybY-sT-uea">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gps001" translatesAutoresizingMaskIntoConstraints="NO" id="ybY-sT-uea">
                         <rect key="frame" x="10" y="3" width="34" height="34"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
@@ -105,15 +108,17 @@
             <connections>
                 <outlet property="abcd" destination="dpf-Gk-t1o" id="TeB-Bz-Idl"/>
                 <outlet property="address" destination="iZv-KW-0c0" id="mMj-qg-cSP"/>
+                <outlet property="bottomBG" destination="rCS-Ok-tQs" id="aec-OP-zWu"/>
                 <outlet property="img" destination="FD3-fq-ujV" id="rvs-F8-d9Z"/>
                 <outlet property="person" destination="R68-SB-ldf" id="ema-Oc-Pmc"/>
                 <outlet property="phone" destination="xPP-WJ-Eo9" id="0Zo-8Z-3gb"/>
                 <outlet property="projectName" destination="e9g-UE-God" id="KRT-JK-ah1"/>
+                <outlet property="topBG" destination="Cud-Ag-7n7" id="UXF-B7-xS7"/>
             </connections>
             <point key="canvasLocation" x="24.5" y="52"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="error.png" width="28" height="28"/>
+        <image name="gps001" width="30" height="30"/>
     </resources>
 </document>

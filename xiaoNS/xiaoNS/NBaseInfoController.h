@@ -10,4 +10,6 @@
 
 @interface NBaseInfoController : UIViewController
 
+@property (nonatomic, strong) NSDictionary *project;
+
 @end

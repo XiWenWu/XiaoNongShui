@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+/** cell 的间距 */
+#define WorkInfoCellBorder 5
+
 @class WorksInfo;
 
 @interface WorkInfoCell : UITableViewCell

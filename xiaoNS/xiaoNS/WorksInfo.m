@@ -19,11 +19,13 @@
 
 - (instancetype) initWithDict:(NSDictionary *)dict {
     if (self = [super init]) {
+        self.ID           = dict[@"id"];
         self.img          = dict[@"img"];
         self.abcd         = dict[@"abcd"];
         self.phone        = dict[@"phone"];
         self.person       = dict[@"person"];
         self.address      = dict[@"address"];
+        self.proindex     = dict[@"proindex"];
         self.projectName  = dict[@"projectName"];
     }
     return self;
