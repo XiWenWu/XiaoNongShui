@@ -13,10 +13,11 @@
 #import "NManageRecordController.h"
 
 #import "AFHTTPSessionManager.h"
+#import "MBProgressHUD+MJ.h"
 
 @interface NSubWorkController ()
 
-@property (nonatomic, strong) NSArray *subWorkInfos;
+@property (nonatomic, strong) NSDictionary *subWorkInfo;
 
 @end
 
@@ -26,7 +27,10 @@ static CGFloat const labelH = 44;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self setSubWorkInfos];
+    
+    // [self setSubWorkInfos];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor purpleColor];
     self.title = @"详情";
@@ -39,32 +43,29 @@ static CGFloat const labelH = 44;
     UIView *hView = [[UIView alloc] initWithFrame:CGRectMake(0, SHy, SHw, SHh)];
     hView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:hView];
-    // 添加分页控制器
-    [self setUpChildViewController];
     //
-    [self setUpTitleLabel:hView];
+    
+    [MBProgressHUD showMessage:@"正在加载..."];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUD];
+        // 添加分页控制器
+        [self setUpChildViewController];
+        
+        [self setUpTitleLabel:hView];
+        
+    });
 }
 
 - (void)setSubWorkInfos {
     // 网络请求
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    //
+    // self.subWorkUrl 请求的数据是  基础信息 图片 维修记录 管护记录 4个界面需要用到的
+    // self.subWorkUrl = http://www.cloudowr.com:8801/nsgcgl/api/v3/projectDetail?key=android&id=1102&proindex=4
     [manager GET:self.subWorkUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         NSLog(@"downloadProgress");
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@", responseObject);
-//        NSArray *dictArray = responseObject[@"ret"];
-//        
-//        NSMutableArray *manageArray = [NSMutableArray array];
-//        
-//        for (NSDictionary *dict in dictArray) {
-//            ManageInfo *manage = [ManageInfo manageWithDict:dict];
-//            [manageArray addObject:manage];
-//        }
-//        self.manages = manageArray;
-//        
-//        [self.tableView reloadData];
-        
+        NSLog(@"%@", responseObject[@"ret"]);
+        self.subWorkInfo = responseObject[@"ret"];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"网络请求失败");
     }];
@@ -79,18 +80,22 @@ static CGFloat const labelH = 44;
 - (void)setUpChildViewController {
     NBaseInfoController *baseInfo = [[NBaseInfoController alloc] init];
     baseInfo.title = @"基础信息";
+    baseInfo.project = self.subWorkInfo[@"project"];
     [self addChildViewController:baseInfo];
     
     NPictureController *picture = [[NPictureController alloc] init];
     picture.title = @"图片";
+    picture.imgs = self.subWorkInfo[@"imgs"];
     [self addChildViewController:picture];
     
     NRepairRecordController *repairRecord = [[NRepairRecordController alloc] init];
     repairRecord.title = @"维修记录";
+    repairRecord.repair = self.subWorkInfo[@"repair"];
     [self addChildViewController:repairRecord];
     
     NManageRecordController *manageRecord = [[NManageRecordController alloc] init];
     manageRecord.title = @"管护记录";
+    manageRecord.maintain = self.subWorkInfo[@"maintain"];
     [self addChildViewController:manageRecord];
 }
 

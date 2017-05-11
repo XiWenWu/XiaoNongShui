@@ -8,7 +8,12 @@
 
 #import "NManageRecordController.h"
 
+#import "subManage.h"
+#import "subManageCell.h"
+
 @interface NManageRecordController ()
+
+@property(nonatomic ,strong) NSArray *subManages;
 
 @end
 
@@ -16,12 +21,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.tableView.rowHeight = 60;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSLog(@"%@", self.maintain);
+    [self setSubManages];
+    //[self.tableView reloadData];
+}
+//NSArray *dictArray = responseObject[@"ret"][@"list"];
+//// 将字典数据转为模型数据
+//NSMutableArray *workArray = [NSMutableArray array];
+//// 遍历，转换
+//for (NSDictionary *dict in dictArray) {
+//    WorksInfo *work = [WorksInfo workWithDict:dict];
+//    // 添加模型
+//    [workArray addObject:work];
+//}
+//self.works = workArray;
+- (void)setSubManages {
+    NSMutableArray *subManagesArray = [NSMutableArray array];
+    NSDictionary *dictArray = self.maintain;
+    for (NSDictionary *dict in dictArray) {
+        subManage *manage = [subManage subManageWithDict:dict];
+        [subManagesArray addObject:manage];
+    }
+    self.subManages = subManagesArray;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,23 +60,43 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.subManages.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+//    static NSString *subManageID = @"subManage";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:subManageID];
+//    if (cell == nil) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:subManageID];
+//    }
+//    subManage *manage = self.subManages[indexPath.row];
+//    cell.textLabel.text = manage.date;
+//    cell.detailTextLabel.text = manage.name;
     
-    // Configure the cell...
+    //    static NSString *Cid = @"wicell";
+    //    WorkInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:Cid];
+    //    if (cell == nil) {
+    //        cell = [[[NSBundle mainBundle] loadNibNamed:@"WorkInfoCell" owner:nil options:nil] lastObject];
+    //    }
+    //    WorksInfo *info = self.works[indexPath.row];
+    //    cell.work = info;
+    static NSString *subManageID = @"subManageID";
+    subManageCell *cell = [tableView dequeueReusableCellWithIdentifier:subManageID];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"subManageCell" owner:nil options:nil] lastObject];
+    }
+    subManage *manage = self.subManages[indexPath.row];
+    cell.manage = manage;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
