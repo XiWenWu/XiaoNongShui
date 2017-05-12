@@ -8,7 +8,11 @@
 
 #import "NPictureController.h"
 
+#import "subPicture.h"
+
 @interface NPictureController ()
+
+@property(nonatomic, strong)NSArray *subPictures;
 
 @end
 
@@ -19,12 +23,29 @@
     self.view.backgroundColor = [UIColor blueColor];
     // Do any additional setup after loading the view.
     NSLog(@"%@", self.imgs);
+    [self setSubPictures];
+    [self setAllImages];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)setSubPictures {
+    NSMutableArray *dictArray = [NSMutableArray array];
+    NSDictionary *subPicturesArray = self.imgs;
+    for (NSDictionary *dict in subPicturesArray) {
+        subPicture *pic = [subPicture subPictureWithDict:dict];
+        [dictArray addObject:pic];
+    }
+    self.subPictures = dictArray;
+}
+
+- (void)setAllImages {
+    UIImageView *img = [[UIImageView alloc] init];
+}
+
 
 /*
 #pragma mark - Navigation
