@@ -73,4 +73,20 @@ static AFHTTPSessionManager *manager = nil;
         }];
     }
 }
+
+/**
+ *  处理服务器返回结果，转换成ServerResponseModel
+ *
+ *  @param JSONObject 服务器初步解析
+ *  @param type       result类型
+ *  @param className  result中存放的model类名
+ *
+ *  @return ServerResponseModel
+ */
+- (ServerResponseModel *)serverResponseHandle:(NSDictionary *)JSONObject ResultType:(ServerResponseResultType)type ModelClass:(NSString *)className
+{
+    ServerResponseModel *responseModel = [[ServerResponseModel alloc]initWithServerResponse:JSONObject ResultType:type ModelClassName:className];
+    
+    return responseModel;
+}
 @end

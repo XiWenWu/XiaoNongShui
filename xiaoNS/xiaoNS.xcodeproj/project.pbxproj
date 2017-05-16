@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		162DED1A1ECACD4800ED2DCE /* ServerResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 162DED191ECACD4800ED2DCE /* ServerResponseModel.m */; };
+		162DED221ECACF0900ED2DCE /* PageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 162DED211ECACF0900ED2DCE /* PageModel.m */; };
 		1699A9B51ECA96B000326C9C /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1699A9B41ECA96B000326C9C /* NetWork.m */; };
 		16E1BD2A1EC4900800BFBBAD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16E1BD141EC4900800BFBBAD /* Info.plist */; };
 		16E1BD2B1EC4900800BFBBAD /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E1BD171EC4900800BFBBAD /* MJExtensionConst.m */; };
@@ -118,6 +120,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		162DED181ECACD4800ED2DCE /* ServerResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerResponseModel.h; sourceTree = "<group>"; };
+		162DED191ECACD4800ED2DCE /* ServerResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerResponseModel.m; sourceTree = "<group>"; };
+		162DED1C1ECACE2A00ED2DCE /* EnumConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnumConst.h; sourceTree = "<group>"; };
+		162DED201ECACF0900ED2DCE /* PageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageModel.h; sourceTree = "<group>"; };
+		162DED211ECACF0900ED2DCE /* PageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageModel.m; sourceTree = "<group>"; };
 		1699A9B31ECA96B000326C9C /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
 		1699A9B41ECA96B000326C9C /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
 		1699A9B61ECA970600326C9C /* INSNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSNetWork.h; sourceTree = "<group>"; };
@@ -325,12 +332,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		162DED1B1ECACE1100ED2DCE /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				162DED1C1ECACE2A00ED2DCE /* EnumConst.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		162DED1F1ECACEFF00ED2DCE /* CommonModel */ = {
+			isa = PBXGroup;
+			children = (
+				162DED201ECACF0900ED2DCE /* PageModel.h */,
+				162DED211ECACF0900ED2DCE /* PageModel.m */,
+			);
+			path = CommonModel;
+			sourceTree = "<group>";
+		};
 		1699A9B21ECA969F00326C9C /* Net */ = {
 			isa = PBXGroup;
 			children = (
 				1699A9B61ECA970600326C9C /* INSNetWork.h */,
 				1699A9B31ECA96B000326C9C /* NetWork.h */,
 				1699A9B41ECA96B000326C9C /* NetWork.m */,
+				162DED181ECACD4800ED2DCE /* ServerResponseModel.h */,
+				162DED191ECACD4800ED2DCE /* ServerResponseModel.m */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -550,6 +576,8 @@
 		9CF75D2E1EB038D000F7112D /* xiaoNS */ = {
 			isa = PBXGroup;
 			children = (
+				162DED1F1ECACEFF00ED2DCE /* CommonModel */,
+				162DED1B1ECACE1100ED2DCE /* Macro */,
 				9CF75D641EB03C5700F7112D /* tools */,
 				9CF75D631EB03C4F00F7112D /* other */,
 				9CF75D621EB03C3800F7112D /* class */,
@@ -906,6 +934,7 @@
 				9CF75D941EB0452200F7112D /* NManageController.m in Sources */,
 				9CB088FE1EB1EFF7002E5D50 /* AFURLSessionManager.m in Sources */,
 				9CB089041EB1EFF7002E5D50 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				162DED221ECACF0900ED2DCE /* PageModel.m in Sources */,
 				9C6648A41EC18A5A001914BD /* UIImageView+WebCache.m in Sources */,
 				9CB3A6871EC3F77C00B13149 /* subRepair.m in Sources */,
 				9C66489F1EC18A5A001914BD /* UIButton+WebCache.m in Sources */,
@@ -925,6 +954,7 @@
 				9CF75D911EB0450B00F7112D /* NRepairController.m in Sources */,
 				9CB3A6811EC3F73600B13149 /* subBaseInfo.m in Sources */,
 				16E1BD301EC4900800BFBBAD /* NSObject+MJClass.m in Sources */,
+				162DED1A1ECACD4800ED2DCE /* ServerResponseModel.m in Sources */,
 				9CF75D341EB038D000F7112D /* AppDelegate.m in Sources */,
 				9C6648A31EC18A5A001914BD /* UIImageView+HighlightedWebCache.m in Sources */,
 				9CB0890D1EB1F6A2002E5D50 /* WorksInfo.m in Sources */,

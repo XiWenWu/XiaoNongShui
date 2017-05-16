@@ -11,5 +11,9 @@
 
 #import <UIKit/UIKit.h>
 #import "MJExtension.h"//MJExtension
+#import "EnumConst.h"
+#import "PageModel.h"
+#import "ServerResponseModel.h"
+
 
 #endif /* PrefixHeader_pch */
