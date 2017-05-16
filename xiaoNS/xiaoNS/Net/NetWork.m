@@ -38,4 +38,39 @@ static AFHTTPSessionManager *manager = nil;
     }
     return self;
 }
+
+- (void)requestData:(NSString *)path params:(NSDictionary *)params completion:(void (^)(id JSONObject))completion {
+    [manager.requestSerializer setValue:@"tokenKey" forHTTPHeaderField:@"token"];
+    path = [NSString stringWithFormat:@"%@%@",@"ip地址",path];
+    if (_isGetMethod) {
+        [manager GET:path parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSData *data = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
+            
+            id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            if (completion) {
+                completion(result);
+            }
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (completion) {
+                completion(@{@"errorMsg":error.localizedDescription});
+            }
+        }];
+    } else {
+        [manager POST:path parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSData *data = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
+            id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            if (completion) {
+                completion(result);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (completion) {
+                completion(@{@"errorMsg":error.localizedDescription});
+            }
+        }];
+    }
+}
 @end
