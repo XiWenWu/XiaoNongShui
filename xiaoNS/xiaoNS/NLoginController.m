@@ -8,6 +8,7 @@
 
 #import "NLoginController.h"
 #import "NTabBarController.h"
+#import "AppDelegate.h"
 #import "MBProgressHUD+MJ.h"
 
 @interface NLoginController ()
@@ -66,7 +67,11 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [MBProgressHUD hideHUD];
         // self.window.rootViewController = [[NTabBarController alloc] init];
-        [UIApplication sharedApplication].keyWindow.rootViewController = [[NTabBarController alloc] init];
+        // [UIApplication sharedApplication].keyWindow.rootViewController = [[NTabBarController alloc] init];
+        
+        AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        
+        [UIApplication sharedApplication].keyWindow.rootViewController = tempAppDelegate.LeftSlideVC;
     });
 }
 

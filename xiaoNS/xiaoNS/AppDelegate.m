@@ -44,7 +44,8 @@
     self.LeftSlideVC = [[LeftSlideViewController alloc] initWithLeftView:leftVC andMainView:self.mainTabBarController];
     // [UIApplication sharedApplication].keyWindow.rootViewController = [[NTabBarController alloc] init];
     
-    self.window.rootViewController = self.LeftSlideVC;
+    //self.window.rootViewController = self.LeftSlideVC;
+    self.window.rootViewController = [[NLoginController alloc] init];
     
     [[UINavigationBar appearance] setBarTintColor:[UIColor purpleColor]];
     return YES;
