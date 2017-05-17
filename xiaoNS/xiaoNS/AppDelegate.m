@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import "NLoginController.h"
+#import "NNavHomeController.h"
+#import "NHomeController.h"
+#import "LeftSortsViewController.h"
+#import "NTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -15,13 +19,34 @@
 
 @implementation AppDelegate
 
-
+/*
+ 2017-05-16 增加左侧滑动  注释登录
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyWindow];
     self.window.rootViewController = [[NLoginController alloc] init];
 
+    return YES;
+}
+*/
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];   //设置通用背景颜色
+    [self.window makeKeyAndVisible];
+    
+    // 把主界面 MainPageViewController 添加到 导航栏控制器 UINavigationController 中
+    self.mainTabBarController = [[NTabBarController alloc] init];
+    // 左侧菜单
+    LeftSortsViewController *leftVC = [[LeftSortsViewController alloc] init];
+    self.LeftSlideVC = [[LeftSlideViewController alloc] initWithLeftView:leftVC andMainView:self.mainTabBarController];
+    // [UIApplication sharedApplication].keyWindow.rootViewController = [[NTabBarController alloc] init];
+    
+    self.window.rootViewController = self.LeftSlideVC;
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor purpleColor]];
     return YES;
 }
 

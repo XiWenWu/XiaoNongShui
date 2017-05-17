@@ -15,13 +15,12 @@
 #import "AFHTTPSessionManager.h"
 #import "MBProgressHUD+MJ.h"
 
+
 @interface NSubWorkController ()
 
 @property (nonatomic, strong) NSDictionary *subWorkInfo;
 
 @end
-
-static CGFloat const labelH = 44;
 
 @implementation NSubWorkController
 
@@ -39,7 +38,7 @@ static CGFloat const labelH = 44;
     // 计算UIScrollView控件位置
     CGFloat SHy = navFrame.origin.y + navFrame.size.height;
     CGFloat SHw = self.view.frame.size.width;
-    CGFloat SHh = labelH;
+    CGFloat SHh = tabMsgViewH;
     UIView *hView = [[UIView alloc] initWithFrame:CGRectMake(0, SHy, SHw, SHh)];
     hView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:hView];
@@ -107,7 +106,7 @@ static CGFloat const labelH = 44;
     CGFloat labelX = 0;
     CGFloat labelY = 0;
     CGFloat labelW = viewW / 4;
-    CGFloat labelH = 44;
+    CGFloat labelH = tabMsgViewH;
     
     for (int i = 0; i < chlidCount; i++) {
         UIViewController *vc = self.childViewControllers[i];
@@ -139,7 +138,7 @@ static CGFloat const labelH = 44;
     CGFloat barH = self.navigationController.navigationBar.frame.size.height;
     CGFloat barY = self.navigationController.navigationBar.frame.origin.y;
     
-    vc.view.frame = CGRectMake(0, barH + barY + labelH, self.view.frame.size.width, self.view.frame.size.height - barH - barY - labelH );
+    vc.view.frame = CGRectMake(0, barH + barY + tabMsgViewH, self.view.frame.size.width, self.view.frame.size.height - barH - barY - tabMsgViewH );
     
     [self.view addSubview:vc.view];
 }

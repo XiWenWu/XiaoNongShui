@@ -81,8 +81,13 @@
 		9CB4C2261EBC72AD00180A48 /* NPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4C2251EBC72AD00180A48 /* NPictureController.m */; };
 		9CB4C2291EBC72FF00180A48 /* NRepairRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4C2281EBC72FF00180A48 /* NRepairRecordController.m */; };
 		9CB4C22C1EBC732D00180A48 /* NManageRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4C22B1EBC732D00180A48 /* NManageRecordController.m */; };
+		9CC0AEE51ECB02DE007A6814 /* NNavOtherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0AEE41ECB02DE007A6814 /* NNavOtherController.m */; };
 		9CD0DFDE1EB2DA8B00299212 /* WorkInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0DFDC1EB2DA8B00299212 /* WorkInfoCell.m */; };
 		9CD0DFDF1EB2DA8B00299212 /* WorkInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD0DFDD1EB2DA8B00299212 /* WorkInfoCell.xib */; };
+		9CDBFC8F1ECAF59200BCF9A6 /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBFC8E1ECAF59200BCF9A6 /* LeftSlideViewController.m */; };
+		9CDBFC921ECAF5AA00BCF9A6 /* UIView+XW.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBFC911ECAF5AA00BCF9A6 /* UIView+XW.m */; };
+		9CDBFC951ECAF6BF00BCF9A6 /* LeftSortsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBFC941ECAF6BF00BCF9A6 /* LeftSortsViewController.m */; };
+		9CDBFC981ECAF70200BCF9A6 /* NOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBFC971ECAF70200BCF9A6 /* NOtherViewController.m */; };
 		9CDEF8E61EC2B1DD0089F184 /* UIImage+XW.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDEF8E51EC2B1DD0089F184 /* UIImage+XW.m */; };
 		9CDEF8E81EC2EED70089F184 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CDEF8E71EC2EED70089F184 /* Assets.xcassets */; };
 		9CF75D311EB038D000F7112D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D301EB038D000F7112D /* main.m */; };
@@ -263,9 +268,19 @@
 		9CB4C2281EBC72FF00180A48 /* NRepairRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRepairRecordController.m; sourceTree = "<group>"; };
 		9CB4C22A1EBC732D00180A48 /* NManageRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NManageRecordController.h; sourceTree = "<group>"; };
 		9CB4C22B1EBC732D00180A48 /* NManageRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NManageRecordController.m; sourceTree = "<group>"; };
+		9CC0AEE31ECB02DE007A6814 /* NNavOtherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNavOtherController.h; sourceTree = "<group>"; };
+		9CC0AEE41ECB02DE007A6814 /* NNavOtherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNavOtherController.m; sourceTree = "<group>"; };
 		9CD0DFDB1EB2DA8B00299212 /* WorkInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkInfoCell.h; sourceTree = "<group>"; };
 		9CD0DFDC1EB2DA8B00299212 /* WorkInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkInfoCell.m; sourceTree = "<group>"; };
 		9CD0DFDD1EB2DA8B00299212 /* WorkInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkInfoCell.xib; sourceTree = "<group>"; };
+		9CDBFC8D1ECAF59200BCF9A6 /* LeftSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSlideViewController.h; sourceTree = "<group>"; };
+		9CDBFC8E1ECAF59200BCF9A6 /* LeftSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSlideViewController.m; sourceTree = "<group>"; };
+		9CDBFC901ECAF5AA00BCF9A6 /* UIView+XW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XW.h"; sourceTree = "<group>"; };
+		9CDBFC911ECAF5AA00BCF9A6 /* UIView+XW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XW.m"; sourceTree = "<group>"; };
+		9CDBFC931ECAF6BF00BCF9A6 /* LeftSortsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSortsViewController.h; sourceTree = "<group>"; };
+		9CDBFC941ECAF6BF00BCF9A6 /* LeftSortsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSortsViewController.m; sourceTree = "<group>"; };
+		9CDBFC961ECAF70200BCF9A6 /* NOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOtherViewController.h; sourceTree = "<group>"; };
+		9CDBFC971ECAF70200BCF9A6 /* NOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOtherViewController.m; sourceTree = "<group>"; };
 		9CDEF8E41EC2B1DD0089F184 /* UIImage+XW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XW.h"; sourceTree = "<group>"; };
 		9CDEF8E51EC2B1DD0089F184 /* UIImage+XW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XW.m"; sourceTree = "<group>"; };
 		9CDEF8E71EC2EED70089F184 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -504,6 +519,23 @@
 			name = subWork;
 			sourceTree = "<group>";
 		};
+		9CB55E001ECADE2A000B27DA /* LeftSlideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9CDBFC8D1ECAF59200BCF9A6 /* LeftSlideViewController.h */,
+				9CDBFC8E1ECAF59200BCF9A6 /* LeftSlideViewController.m */,
+				9CDBFC901ECAF5AA00BCF9A6 /* UIView+XW.h */,
+				9CDBFC911ECAF5AA00BCF9A6 /* UIView+XW.m */,
+				9CDBFC931ECAF6BF00BCF9A6 /* LeftSortsViewController.h */,
+				9CDBFC941ECAF6BF00BCF9A6 /* LeftSortsViewController.m */,
+				9CC0AEE31ECB02DE007A6814 /* NNavOtherController.h */,
+				9CC0AEE41ECB02DE007A6814 /* NNavOtherController.m */,
+				9CDBFC961ECAF70200BCF9A6 /* NOtherViewController.h */,
+				9CDBFC971ECAF70200BCF9A6 /* NOtherViewController.m */,
+			);
+			name = LeftSlideViewController;
+			sourceTree = "<group>";
+		};
 		9CDEF8E01EC2ACF80089F184 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -673,6 +705,7 @@
 		9CF75D851EB03FC000F7112D /* home */ = {
 			isa = PBXGroup;
 			children = (
+				9CB55E001ECADE2A000B27DA /* LeftSlideViewController */,
 				9C74BEB01EB0A3D700A70185 /* NNavHomeController.h */,
 				9C74BEB11EB0A3D700A70185 /* NNavHomeController.m */,
 				9CB088CB1EB1C6BF002E5D50 /* NHomeController.h */,
@@ -893,6 +926,7 @@
 				9C6648A41EC18A5A001914BD /* UIImageView+WebCache.m in Sources */,
 				9CB3A6871EC3F77C00B13149 /* subRepair.m in Sources */,
 				9C66489F1EC18A5A001914BD /* UIButton+WebCache.m in Sources */,
+				9CDBFC981ECAF70200BCF9A6 /* NOtherViewController.m in Sources */,
 				9CB089021EB1EFF7002E5D50 /* AFAutoPurgingImageCache.m in Sources */,
 				9C74BEAC1EB0A3AE00A70185 /* NNavRepairController.m in Sources */,
 				9C82F1AC1EBACB320024B3B1 /* ManageInfo.m in Sources */,
@@ -910,7 +944,9 @@
 				9CB3A6811EC3F73600B13149 /* subBaseInfo.m in Sources */,
 				16E1BD301EC4900800BFBBAD /* NSObject+MJClass.m in Sources */,
 				9CF75D341EB038D000F7112D /* AppDelegate.m in Sources */,
+				9CDBFC921ECAF5AA00BCF9A6 /* UIView+XW.m in Sources */,
 				9C6648A31EC18A5A001914BD /* UIImageView+HighlightedWebCache.m in Sources */,
+				9CDBFC8F1ECAF59200BCF9A6 /* LeftSlideViewController.m in Sources */,
 				9CB0890D1EB1F6A2002E5D50 /* WorksInfo.m in Sources */,
 				9C82F1B01EBACB660024B3B1 /* ManageInfoCell.m in Sources */,
 				9C82F1A41EBAB8880024B3B1 /* RepairInfo.m in Sources */,
@@ -923,6 +959,7 @@
 				9CB3A6931EC4470700B13149 /* subRepairCell.m in Sources */,
 				9C82F1A81EBAB8C60024B3B1 /* RepairInfoCell.m in Sources */,
 				16E1BD2E1EC4900800BFBBAD /* MJPropertyKey.m in Sources */,
+				9CDBFC951ECAF6BF00BCF9A6 /* LeftSortsViewController.m in Sources */,
 				16E1BD321EC4900800BFBBAD /* NSObject+MJKeyValue.m in Sources */,
 				9CDEF8E61EC2B1DD0089F184 /* UIImage+XW.m in Sources */,
 				9C74BEB21EB0A3D700A70185 /* NNavHomeController.m in Sources */,
@@ -935,6 +972,7 @@
 				9C66489C1EC18A5A001914BD /* SDWebImageDownloaderOperation.m in Sources */,
 				9CB4C2201EBC714000180A48 /* NSubWorkController.m in Sources */,
 				9C66489B1EC18A5A001914BD /* SDWebImageDownloader.m in Sources */,
+				9CC0AEE51ECB02DE007A6814 /* NNavOtherController.m in Sources */,
 				9CB089031EB1EFF7002E5D50 /* AFImageDownloader.m in Sources */,
 				16E1BD2C1EC4900800BFBBAD /* MJFoundation.m in Sources */,
 			);

@@ -7,6 +7,8 @@
 //
 
 #import "NHomeController.h"
+#import "AppDelegate.h"
+
 
 @interface NHomeController ()<UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -27,8 +29,43 @@
     
     // [self setFirstTools];
     self.scrollView.contentSize = CGSizeMake(0, 640);
+    
+    // 左边菜单按钮
+    UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    menuBtn.frame = CGRectMake(0, 0, 20, 18);
+    [menuBtn setBackgroundImage:[UIImage imageNamed:@"menu"] forState:UIControlStateNormal];
+    [menuBtn addTarget:self action:@selector(openOrCloseLeftList) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menuBtn];
 
+}
 
+- (void)openOrCloseLeftList {
+    NSLog(@"TouchUpInside -- openOrCloseLeftList");
+    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    if (tempAppDelegate.LeftSlideVC.closed)
+    {
+        [tempAppDelegate.LeftSlideVC openLeftView];
+    }
+    else
+    {
+        [tempAppDelegate.LeftSlideVC closeLeftView];
+    }
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSLog(@"viewWillDisappear");
+    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [tempAppDelegate.LeftSlideVC setPanEnabled:NO];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"viewWillAppear");
+    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [tempAppDelegate.LeftSlideVC setPanEnabled:YES];
 }
 
 //- (void) setFirstTools {
@@ -48,7 +85,7 @@
 //    
 //    // 3.根据应用个数创建对应的框框(index 0 ~ 11)
 //    for (int index = 0; index < 6; index++) {
-//        // 3.1.创建view
+//        // 3.1.创建view 3181268395
 //        UIView *view = [[UIView alloc] init];
 //        
 //        view.backgroundColor = [UIColor redColor];

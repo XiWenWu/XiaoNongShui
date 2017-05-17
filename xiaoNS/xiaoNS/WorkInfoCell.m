@@ -99,9 +99,9 @@
 - (void)setFrame:(CGRect)frame {
     frame.origin.y += WorkInfoCellBorder;
     // cell 香油偏移5个像素
-    frame.origin.x = WorkInfoCellBorder;
+    // frame.origin.x = WorkInfoCellBorder;
     // 保证cell居中，cell整体宽度需要缩进10个像素
-    frame.size.width -= 2 * WorkInfoCellBorder;
+    // frame.size.width -= 2 * WorkInfoCellBorder;
     // cell上下间距
     frame.size.height -= WorkInfoCellBorder;
     

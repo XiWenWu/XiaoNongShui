@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+
+
 @interface subBaseInfo : NSObject
 /**工程编号*/
-@property (nonatomic, copy) NSString *id;
+@property (nonatomic, copy) NSString *ID;
 /**名称*/
 @property (nonatomic, copy) NSString *name;
 /**乡镇*/
@@ -60,6 +62,7 @@
 
 - (instancetype)initWithDict:(NSDictionary *)dict;
 + (instancetype)subBaseInfoWithDict:(NSDictionary *)dict;
++ (NSMutableArray *)arrayWithDict:(NSDictionary *)dict;
 
 
 @end
