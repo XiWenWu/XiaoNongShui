@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     
     NOtherViewController *other = [[NOtherViewController alloc] init];
-    
+    other.subURL = self.URL;
     self.viewControllers = @[other];
 }
 

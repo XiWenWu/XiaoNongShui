@@ -63,6 +63,7 @@
 //        [MBProgressHUD showError:@"密码错误"];
 //        return;
 //    }
+    
     [MBProgressHUD showMessage:@"正在登录..."];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [MBProgressHUD hideHUD];

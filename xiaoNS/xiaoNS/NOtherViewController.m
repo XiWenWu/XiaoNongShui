@@ -21,11 +21,15 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor brownColor];
     
+    
+    
     UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     menuBtn.frame = CGRectMake(0, 0, 20, 18);
     [menuBtn setBackgroundImage:[UIImage imageNamed:@"menu"] forState:UIControlStateNormal];
     [menuBtn addTarget:self action:@selector(openOrCloseLeftList) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menuBtn];
+    
+    [self setWebViewForSubURLd];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,6 +43,21 @@
     AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     [UIApplication sharedApplication].keyWindow.rootViewController = tempAppDelegate.LeftSlideVC;
+    
+}
+
+- (void)setWebViewForSubURLd{
+    UIWebView *web = [[UIWebView alloc] init];
+    
+    CGSize size = self.view.frame.size;
+    
+    web.frame = CGRectMake(0, 0, size.width, size.height);
+
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.subURL]];
+    
+    [self.view addSubview:web];
+    
+    [web loadRequest:request];
     
 }
 /*

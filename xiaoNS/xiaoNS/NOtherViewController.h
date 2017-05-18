@@ -10,4 +10,6 @@
 
 @interface NOtherViewController : UIViewController
 
+@property (nonatomic, strong) NSString *subURL;
+
 @end

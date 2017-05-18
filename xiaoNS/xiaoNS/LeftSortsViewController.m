@@ -81,7 +81,7 @@
     AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NNavOtherController *vc = [[NNavOtherController alloc] init];
     [tempAppDelegate.LeftSlideVC closeLeftView];//关闭左侧抽屉
-    
+    vc.URL = @"www.m.baidu.com";
     [UIApplication sharedApplication].keyWindow.rootViewController = vc;
     //[tempAppDelegate.mainNavigationController pushViewController:vc animated:NO];
 }

@@ -10,4 +10,6 @@
 
 @interface NNavOtherController : UINavigationController
 
+@property(nonatomic, strong)NSString *URL;
+
 @end
