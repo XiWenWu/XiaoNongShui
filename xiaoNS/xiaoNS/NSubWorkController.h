@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+/** 切换标题栏的高度 */
+#define tabMsgViewH 44
 
 @interface NSubWorkController : UIViewController
 
