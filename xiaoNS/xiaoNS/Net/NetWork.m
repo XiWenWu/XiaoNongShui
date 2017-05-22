@@ -38,10 +38,10 @@ static AFHTTPSessionManager *manager = nil;
     }
     return self;
 }
-
+//@"http://www.cloudowr.com:8801/nsgcgl/api/v3/projectList?key=android&userid=1
 - (void)requestData:(NSString *)path params:(NSDictionary *)params completion:(void (^)(id JSONObject))completion {
     [manager.requestSerializer setValue:@"tokenKey" forHTTPHeaderField:@"token"];
-    path = [NSString stringWithFormat:@"%@%@",@"ip地址",path];
+    path = [NSString stringWithFormat:@"%@%@",@"www.cloudowr.com:8801",path];
     if (_isGetMethod) {
         [manager GET:path parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -89,4 +89,21 @@ static AFHTTPSessionManager *manager = nil;
     
     return responseModel;
 }
+
+/**
+ *  用户登陆
+ *  @param request 登陆请求model
+ *  @param completion   返回数据的block
+ */
+- (void)queryProjectList:(QueryProjectListRequest*)request completion:(void(^)(id JSONObject))completion {
+    NSDictionary *param = request.mj_keyValues;
+    NSDictionary *parameter = @{@"param":param};
+    [self requestData:kNsgcglapiV3ProjectList params:parameter completion:^(id JSONObject) {
+        __weak typeof(self)weakSelf = self;
+        ServerResponseModel *responseModel = [weakSelf serverResponseHandle:JSONObject ResultType:ServerResponseResultType_NSObject ModelClass:NSStringFromClass([WorksInfo class])];
+        
+        completion(responseModel);
+    }];
+}
+
 @end
