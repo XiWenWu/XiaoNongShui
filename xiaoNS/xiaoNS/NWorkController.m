@@ -17,7 +17,7 @@
 
 @interface NWorkController ()
 /** 工程信息 */
-@property (nonatomic, strong) NSArray *works;
+@property (nonatomic, strong) NSMutableArray *works;
 
 @end
 
@@ -38,11 +38,30 @@
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, WorkInfoCellBorder, 0);
     self.tableView.separatorStyle = NO;
     self.tableView.backgroundColor = [UIColor colorWithRed:220.0/255 green:220.0/255 blue:220.0/255 alpha:1];
+    self.works = [NSMutableArray array];
     // 通过网络请求获取数据
     [self setUpWorks];
 }
 /** 通过网络请求获取数据 */
 - (void)setUpWorks {
+
+    QueryProjectListRequest *request = [[QueryProjectListRequest alloc]init];
+    request.userId = @1;
+    request.key = @"android";
+    [[NetWork shareInstance] queryProjectList:request completion:^(id JSONObject) {
+        ServerResponseModel *serverRM= JSONObject;
+        if (serverRM.errorCode == ErrorCode_Success) {
+            if (serverRM.result) {
+                [self.works addObjectsFromArray:serverRM.result];
+                [self.tableView reloadData];
+            }
+        }else
+        {
+            NSLog(@"网络请求失败");
+        }
+    }];
+    
+    return;
     // 创建请求管理对象
     AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
     // 发送请求

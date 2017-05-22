@@ -17,6 +17,6 @@
 #import "EnumConst.h"
 #import "Configuration.h"
 #import "ServerResponseModel.h"
-
+#import "NetWork.h"
 
 #endif /* PrefixHeader_pch */
