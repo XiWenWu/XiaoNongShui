@@ -10,7 +10,6 @@
 		162DED1A1ECACD4800ED2DCE /* ServerResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 162DED191ECACD4800ED2DCE /* ServerResponseModel.m */; };
 		162DED221ECACF0900ED2DCE /* PageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 162DED211ECACF0900ED2DCE /* PageModel.m */; };
 		1699A9B51ECA96B000326C9C /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1699A9B41ECA96B000326C9C /* NetWork.m */; };
-		16E1BD2A1EC4900800BFBBAD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16E1BD141EC4900800BFBBAD /* Info.plist */; };
 		16E1BD2B1EC4900800BFBBAD /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E1BD171EC4900800BFBBAD /* MJExtensionConst.m */; };
 		16E1BD2C1EC4900800BFBBAD /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E1BD191EC4900800BFBBAD /* MJFoundation.m */; };
 		16E1BD2D1EC4900800BFBBAD /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E1BD1B1EC4900800BFBBAD /* MJProperty.m */; };
@@ -133,7 +132,6 @@
 		1699A9B31ECA96B000326C9C /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
 		1699A9B41ECA96B000326C9C /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
 		1699A9B61ECA970600326C9C /* INSNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSNetWork.h; sourceTree = "<group>"; };
-		16E1BD141EC4900800BFBBAD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16E1BD151EC4900800BFBBAD /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
 		16E1BD161EC4900800BFBBAD /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
 		16E1BD171EC4900800BFBBAD /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
@@ -379,7 +377,6 @@
 		16E1BD131EC4900800BFBBAD /* MJExtension */ = {
 			isa = PBXGroup;
 			children = (
-				16E1BD141EC4900800BFBBAD /* Info.plist */,
 				16E1BD151EC4900800BFBBAD /* MJExtension.h */,
 				16E1BD161EC4900800BFBBAD /* MJExtensionConst.h */,
 				16E1BD171EC4900800BFBBAD /* MJExtensionConst.m */,
@@ -909,7 +906,6 @@
 				9CD0DFDF1EB2DA8B00299212 /* WorkInfoCell.xib in Resources */,
 				9CF75D3A1EB038D000F7112D /* Main.storyboard in Resources */,
 				9C82F1B11EBACB660024B3B1 /* ManageInfoCell.xib in Resources */,
-				16E1BD2A1EC4900800BFBBAD /* Info.plist in Resources */,
 				9CB088CF1EB1C6BF002E5D50 /* NHomeController.xib in Resources */,
 				9CC09CDA1ECD51340038BA04 /* Assets.xcassets in Resources */,
 				9CB089541EB1FE0C002E5D50 /* MBProgressHUD.bundle in Resources */,

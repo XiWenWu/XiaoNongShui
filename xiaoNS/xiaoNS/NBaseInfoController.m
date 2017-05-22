@@ -10,8 +10,10 @@
 #import "NSubWorkController.h"
 
 #import "subBaseInfo.h"
-
+// 行高
 #define rowHeight 44
+// 间距
+#define rowMargin 10
 
 @interface NBaseInfoController ()
 
@@ -28,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor greenColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     NSLog(@"%@", self.project);
     [self setSubProjects];
     [self addScrollView];
@@ -75,9 +77,9 @@
     CGFloat imageViewH = rowHeight;
     CGFloat imageViewX = 0;
     
-    CGFloat titleLabelW = self.view.frame.size.width/2;
+    CGFloat titleLabelW = self.view.frame.size.width/2 - rowMargin;
     CGFloat titleLabelH = imageViewH;
-    CGFloat titleLabelX = 0;
+    CGFloat titleLabelX = rowMargin;
     CGFloat titleLabelY = 0;
     
     CGFloat msgLabelX = titleLabelW;

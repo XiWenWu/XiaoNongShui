@@ -40,7 +40,7 @@
     CGFloat SHw = self.view.frame.size.width;
     CGFloat SHh = tabMsgViewH;
     UIView *hView = [[UIView alloc] initWithFrame:CGRectMake(0, SHy, SHw, SHh)];
-    hView.backgroundColor = [UIColor blackColor];
+    hView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:hView];
     //
     
@@ -116,7 +116,7 @@
         label.textAlignment = NSTextAlignmentCenter;
         label.font = [UIFont systemFontOfSize:15];
         label.tag = i;
-        label.backgroundColor = [UIColor redColor];
+        label.backgroundColor = [UIColor whiteColor];
         // 添加按钮手势
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleClick:)];
         [label addGestureRecognizer:tap];
