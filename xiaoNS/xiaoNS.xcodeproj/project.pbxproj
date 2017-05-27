@@ -93,6 +93,8 @@
 		9CDBFC951ECAF6BF00BCF9A6 /* LeftSortsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBFC941ECAF6BF00BCF9A6 /* LeftSortsViewController.m */; };
 		9CDBFC981ECAF70200BCF9A6 /* NOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBFC971ECAF70200BCF9A6 /* NOtherViewController.m */; };
 		9CDEF8E61EC2B1DD0089F184 /* UIImage+XW.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDEF8E51EC2B1DD0089F184 /* UIImage+XW.m */; };
+		9CF2F20D1ED7CED8005F7C18 /* NNavSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2F20C1ED7CED8005F7C18 /* NNavSearchController.m */; };
+		9CF2F2101ED7CEF8005F7C18 /* NSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2F20F1ED7CEF8005F7C18 /* NSearchController.m */; };
 		9CF75D311EB038D000F7112D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D301EB038D000F7112D /* main.m */; };
 		9CF75D341EB038D000F7112D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF75D331EB038D000F7112D /* AppDelegate.m */; };
 		9CF75D3A1EB038D000F7112D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF75D381EB038D000F7112D /* Main.storyboard */; };
@@ -300,6 +302,10 @@
 		9CDEF8E41EC2B1DD0089F184 /* UIImage+XW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XW.h"; sourceTree = "<group>"; };
 		9CDEF8E51EC2B1DD0089F184 /* UIImage+XW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XW.m"; sourceTree = "<group>"; };
 		9CDEF8E91EC317E20089F184 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		9CF2F20B1ED7CED8005F7C18 /* NNavSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNavSearchController.h; sourceTree = "<group>"; };
+		9CF2F20C1ED7CED8005F7C18 /* NNavSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNavSearchController.m; sourceTree = "<group>"; };
+		9CF2F20E1ED7CEF8005F7C18 /* NSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSearchController.h; sourceTree = "<group>"; };
+		9CF2F20F1ED7CEF8005F7C18 /* NSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSearchController.m; sourceTree = "<group>"; };
 		9CF75D2C1EB038D000F7112D /* xiaoNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xiaoNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF75D301EB038D000F7112D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CF75D321EB038D000F7112D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -609,6 +615,17 @@
 			name = Category;
 			sourceTree = "<group>";
 		};
+		9CF2F2071ED7CD07005F7C18 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				9CF2F20B1ED7CED8005F7C18 /* NNavSearchController.h */,
+				9CF2F20C1ED7CED8005F7C18 /* NNavSearchController.m */,
+				9CF2F20E1ED7CEF8005F7C18 /* NSearchController.h */,
+				9CF2F20F1ED7CEF8005F7C18 /* NSearchController.m */,
+			);
+			name = search;
+			sourceTree = "<group>";
+		};
 		9CF75D231EB038D000F7112D = {
 			isa = PBXGroup;
 			children = (
@@ -789,6 +806,7 @@
 				9C74BEAE1EB0A3C600A70185 /* NNavWorkController.m */,
 				9CF75D8A1EB044B500F7112D /* NWorkController.h */,
 				9CF75D8B1EB044B500F7112D /* NWorkController.m */,
+				9CF2F2071ED7CD07005F7C18 /* search */,
 				9CB4C21D1EBC704100180A48 /* subWork */,
 			);
 			name = work;
@@ -962,6 +980,7 @@
 			files = (
 				9CB3A68E1EC414E600B13149 /* subManageCell.m in Sources */,
 				9C6648A01EC18A5A001914BD /* UIImage+GIF.m in Sources */,
+				9CF2F2101ED7CEF8005F7C18 /* NSearchController.m in Sources */,
 				9CB089531EB1FE0C002E5D50 /* MBProgressHUD+MJ.m in Sources */,
 				9CB4C2231EBC728D00180A48 /* NBaseInfoController.m in Sources */,
 				9CF75D841EB03F4600F7112D /* NTabBarController.m in Sources */,
@@ -996,6 +1015,7 @@
 				9CB3A6871EC3F77C00B13149 /* subRepair.m in Sources */,
 				9C66489F1EC18A5A001914BD /* UIButton+WebCache.m in Sources */,
 				9CDBFC981ECAF70200BCF9A6 /* NOtherViewController.m in Sources */,
+				9CF2F20D1ED7CED8005F7C18 /* NNavSearchController.m in Sources */,
 				9CB089021EB1EFF7002E5D50 /* AFAutoPurgingImageCache.m in Sources */,
 				9C74BEAC1EB0A3AE00A70185 /* NNavRepairController.m in Sources */,
 				9C82F1AC1EBACB320024B3B1 /* ManageInfo.m in Sources */,
@@ -1197,7 +1217,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = xiaoNS/PrefixHeader.pch;
 				INFOPLIST_FILE = xiaoNS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-79712908.xiaoNS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1213,7 +1233,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = xiaoNS/PrefixHeader.pch;
 				INFOPLIST_FILE = xiaoNS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-79712908.xiaoNS";
 				PRODUCT_NAME = "$(TARGET_NAME)";

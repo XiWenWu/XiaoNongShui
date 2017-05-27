@@ -72,7 +72,7 @@
 }
 
 - (void)addSubViews {
-    NSLog(@"%ld", self.subProjects.count);
+    NSLog(@"%lu", self.subProjects.count);
     CGFloat imageViewW = self.view.frame.size.width;
     CGFloat imageViewH = rowHeight;
     CGFloat imageViewX = 0;

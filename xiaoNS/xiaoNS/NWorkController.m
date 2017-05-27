@@ -8,6 +8,7 @@
 // 导入控制器
 #import "NWorkController.h"
 #import "NSubWorkController.h"
+#import "NNavSearchController.h"
 // 导入工具
 #import "AFHTTPSessionManager.h"
 // 导入模型
@@ -31,6 +32,14 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
+    // 查询按钮
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftBtn.frame = CGRectMake(0, 0, 30, 30);
+    [leftBtn setBackgroundImage:[UIImage imageNamed:@"search"] forState:UIControlStateNormal];
+    [leftBtn addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"工程";
@@ -42,26 +51,30 @@
     // 通过网络请求获取数据
     [self setUpWorks];
 }
+- (void)search {
+    NNavSearchController *navSearch = [[NNavSearchController alloc] init];
+    [self presentViewController:navSearch animated:YES completion:nil];
+}
 /** 通过网络请求获取数据 */
 - (void)setUpWorks {
 
-    QueryProjectListRequest *request = [[QueryProjectListRequest alloc]init];
-    request.userId = @1;
-    request.key = @"android";
-    [[NetWork shareInstance] queryProjectList:request completion:^(id JSONObject) {
-        ServerResponseModel *serverRM= JSONObject;
-        if (serverRM.errorCode == ErrorCode_Success) {
-            if (serverRM.result) {
-                [self.works addObjectsFromArray:serverRM.result];
-                [self.tableView reloadData];
-            }
-        }else
-        {
-            NSLog(@"网络请求失败");
-        }
-    }];
-    
-    return;
+//    QueryProjectListRequest *request = [[QueryProjectListRequest alloc]init];
+//    request.userId = @1;
+//    request.key = @"android";
+//    [[NetWork shareInstance] queryProjectList:request completion:^(id JSONObject) {
+//        ServerResponseModel *serverRM= JSONObject;
+//        if (serverRM.errorCode == ErrorCode_Success) {
+//            if (serverRM.result) {
+//                [self.works addObjectsFromArray:serverRM.result];
+//                [self.tableView reloadData];
+//            }
+//        }else
+//        {
+//            NSLog(@"网络请求失败");
+//        }
+//    }];
+//    
+//    return;
     // 创建请求管理对象
     AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
     // 发送请求
