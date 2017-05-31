@@ -35,7 +35,11 @@
     [self addDataPicker];
     [self addChoiceControl];
     [self addOkeyBtn];
-    
+    // 初始化选项卡
+    for (int i=0; i<self.infos.count; i++) {
+        [self pickerView:self.pickerData didSelectRow:0 inComponent:i];
+        
+    }
 }
 
 - (NSArray *)infos {
@@ -61,12 +65,15 @@
     data.dataSource = self;
     data.delegate = self;
     self.pickerData = data;
+    
+    
 }
 
 - (void)addChoiceControl {
     CGFloat maxH = CGRectGetMaxY(self.pickerData.frame);
     UILabel *leixing = [[UILabel alloc] init];
-    leixing.frame = CGRectMake( margin, maxH + margin, viewW/3, labelH);
+    CGFloat leftMargin = (viewW/3 - 2*margin) / 2;
+    leixing.frame = CGRectMake( leftMargin, maxH + margin, viewW/3, labelH);
     leixing.text = @"类型：";
     leixing.backgroundColor = [UIColor greenColor];
     [self.view addSubview:leixing];
@@ -76,12 +83,11 @@
     leixingLab.frame = CGRectMake( leixingLabX + margin, maxH + margin, viewW/3, labelH);
     leixingLab.backgroundColor = [UIColor greenColor];
     self.leixingLab = leixingLab;
-    leixingLab.text = @"全部";
     [self.view addSubview:leixingLab];
     
     CGFloat countryH = CGRectGetMaxY(leixing.frame);
     UILabel *country = [[UILabel alloc] init];
-    country.frame = CGRectMake( margin, countryH + margin, viewW/3, labelH);
+    country.frame = CGRectMake( leftMargin, countryH + margin, viewW/3, labelH);
     country.text = @"县/镇/村：";
     country.backgroundColor = [UIColor greenColor];
     [self.view addSubview:country];
@@ -91,12 +97,20 @@
     countryLab.frame = CGRectMake( countryLabX + margin, countryH + margin, viewW/3, labelH);
     countryLab.backgroundColor = [UIColor greenColor];
     self.countryLab = countryLab;
-    countryLab.text = @"全部";
     [self.view addSubview:countryLab];
     
 }
 
 - (void)addOkeyBtn {
+    CGFloat maxH = CGRectGetMaxY(self.countryLab.frame);
+    CGFloat okeyW = 200;
+    CGFloat okeyX = (viewW - okeyW) / 2;
+    UIButton *okey = [[UIButton alloc] init];
+    okey.frame = CGRectMake(okeyX, maxH + margin, okeyW, labelH);
+    [okey setTitle:@"确  认" forState:UIControlStateNormal];
+    okey.backgroundColor = [UIColor orangeColor];
+    self.okeyBtn = okey;
+    [self.view addSubview:okey];
     
 }
 
@@ -120,8 +134,8 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    NSLog(@"%ld--%ld", row, component);
-    NSLog(@"%@", self.infos[component][row]);
+//    NSLog(@"%ld--%ld", row, component);
+//    NSLog(@"%@", self.infos[component][row]);
     if (component == 0) {
         self.leixingLab.text = self.infos[component][row];
     } else if (component == 1) {
