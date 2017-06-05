@@ -7,6 +7,7 @@
 //
 
 #import "NPictureController.h"
+#import "NNavAddPicController.h"
 
 #import "UIImageView+WebCache.h"
 
@@ -28,6 +29,12 @@
     
     [self setSubPictures];
     [self setAllImages];
+    
+}
+
+- (void)addPicture {
+    NNavAddPicController *navAddPic = [[NNavAddPicController alloc] init];
+    [self presentViewController:navAddPic animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,29 +68,47 @@
     CGFloat imageH = imageW;
     
     CGFloat scrollH = viewH;
+    CGFloat allPicH = 0;
     for (int i=0; i<self.subPictures.count; i++) {
         int ii = i%3;
         int jj = i/3;
-        CGFloat imageX = 10 + (imageW + 10) * ii;
-        CGFloat imageY = 10 + (imageH + 10) * jj;
+        CGFloat imageX = picMargin + (imageW + picMargin) * ii;
+        CGFloat imageY = picMargin + (imageH + picMargin) * jj;
         UIImageView *img = [[UIImageView alloc] init];
         subPicture *subPic = self.subPictures[i];
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cloudowr.oss-cn-hangzhou.aliyuncs.com/nsgcgl/420921/%@?x-oss-process=style/thumb_100_100", subPic.url]];
-        [img sd_setImageWithURL:url];
+        // [img sd_setImageWithURL:url];
+        [img sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"holderImage"]];
         img.frame = CGRectMake(imageX, imageY, imageW, imageH);
         
         [scrollView addSubview:img];
         
+        allPicH = CGRectGetMaxY(img.frame);
         // 设置滚动区域
         CGFloat maxH = CGRectGetMaxY(img.frame) + imageW;
         scrollH = scrollH > maxH ? scrollH : maxH;
     }
-    NSLog(@"%f", scrollH);
+    // NSLog(@"%f", scrollH);
+    
+    // 加载图片上传按钮
+    CGFloat addBtnX = picMargin;
+    CGFloat addBtnY = allPicH + picMargin;
+    CGFloat addBtnW = imageW;
+    CGFloat addBtnH = imageH;
+    UIButton *addBtn = [[UIButton alloc] initWithFrame:CGRectMake(addBtnX, addBtnY, addBtnW, addBtnH)];
+    [addBtn setImage:[UIImage imageNamed:@"addPic"] forState:UIControlStateNormal];
+    [scrollView addSubview:addBtn];
     
     scrollView.contentSize = CGSizeMake(0, scrollH);
     
+    [addBtn addTarget:self action:@selector(addMorePic) forControlEvents:UIControlEventTouchUpInside];
     
     
+}
+
+- (void)addMorePic {
+    NNavAddPicController *NavAddPic = [[NNavAddPicController alloc] init];
+    [self presentViewController:NavAddPic animated:YES completion:nil];
 }
 
 

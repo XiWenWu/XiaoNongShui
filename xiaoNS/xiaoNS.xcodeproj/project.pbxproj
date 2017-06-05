@@ -86,6 +86,8 @@
 		9CB4C22C1EBC732D00180A48 /* NManageRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4C22B1EBC732D00180A48 /* NManageRecordController.m */; };
 		9CC09CDA1ECD51340038BA04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC09CD91ECD51340038BA04 /* Assets.xcassets */; };
 		9CC0AEE51ECB02DE007A6814 /* NNavOtherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0AEE41ECB02DE007A6814 /* NNavOtherController.m */; };
+		9CC6B1F81EE0FF3900D1BA17 /* NNavAddPicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6B1F71EE0FF3900D1BA17 /* NNavAddPicController.m */; };
+		9CC6B1FB1EE0FF8D00D1BA17 /* NAddPicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6B1FA1EE0FF8D00D1BA17 /* NAddPicController.m */; };
 		9CD0DFDE1EB2DA8B00299212 /* WorkInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0DFDC1EB2DA8B00299212 /* WorkInfoCell.m */; };
 		9CD0DFDF1EB2DA8B00299212 /* WorkInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD0DFDD1EB2DA8B00299212 /* WorkInfoCell.xib */; };
 		9CDBFC8F1ECAF59200BCF9A6 /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBFC8E1ECAF59200BCF9A6 /* LeftSlideViewController.m */; };
@@ -288,6 +290,10 @@
 		9CC09CD91ECD51340038BA04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CC0AEE31ECB02DE007A6814 /* NNavOtherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNavOtherController.h; sourceTree = "<group>"; };
 		9CC0AEE41ECB02DE007A6814 /* NNavOtherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNavOtherController.m; sourceTree = "<group>"; };
+		9CC6B1F61EE0FF3900D1BA17 /* NNavAddPicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNavAddPicController.h; sourceTree = "<group>"; };
+		9CC6B1F71EE0FF3900D1BA17 /* NNavAddPicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNavAddPicController.m; sourceTree = "<group>"; };
+		9CC6B1F91EE0FF8D00D1BA17 /* NAddPicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAddPicController.h; sourceTree = "<group>"; };
+		9CC6B1FA1EE0FF8D00D1BA17 /* NAddPicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAddPicController.m; sourceTree = "<group>"; };
 		9CD0DFDB1EB2DA8B00299212 /* WorkInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkInfoCell.h; sourceTree = "<group>"; };
 		9CD0DFDC1EB2DA8B00299212 /* WorkInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkInfoCell.m; sourceTree = "<group>"; };
 		9CD0DFDD1EB2DA8B00299212 /* WorkInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkInfoCell.xib; sourceTree = "<group>"; };
@@ -581,6 +587,7 @@
 				9CB4C2221EBC728D00180A48 /* NBaseInfoController.m */,
 				9CB4C2241EBC72AD00180A48 /* NPictureController.h */,
 				9CB4C2251EBC72AD00180A48 /* NPictureController.m */,
+				9CC6B1F51EE0FE6100D1BA17 /* addPic */,
 				9CB4C2271EBC72FF00180A48 /* NRepairRecordController.h */,
 				9CB4C2281EBC72FF00180A48 /* NRepairRecordController.m */,
 				9CB4C22A1EBC732D00180A48 /* NManageRecordController.h */,
@@ -604,6 +611,17 @@
 				9CDBFC971ECAF70200BCF9A6 /* NOtherViewController.m */,
 			);
 			name = LeftSlideViewController;
+			sourceTree = "<group>";
+		};
+		9CC6B1F51EE0FE6100D1BA17 /* addPic */ = {
+			isa = PBXGroup;
+			children = (
+				9CC6B1F61EE0FF3900D1BA17 /* NNavAddPicController.h */,
+				9CC6B1F71EE0FF3900D1BA17 /* NNavAddPicController.m */,
+				9CC6B1F91EE0FF8D00D1BA17 /* NAddPicController.h */,
+				9CC6B1FA1EE0FF8D00D1BA17 /* NAddPicController.m */,
+			);
+			name = addPic;
 			sourceTree = "<group>";
 		};
 		9CDEF8E01EC2ACF80089F184 /* Category */ = {
@@ -1031,6 +1049,7 @@
 				9CD0DFDE1EB2DA8B00299212 /* WorkInfoCell.m in Sources */,
 				9CF75D911EB0450B00F7112D /* NRepairController.m in Sources */,
 				9CB3A6811EC3F73600B13149 /* subBaseInfo.m in Sources */,
+				9CC6B1F81EE0FF3900D1BA17 /* NNavAddPicController.m in Sources */,
 				16E1BD301EC4900800BFBBAD /* NSObject+MJClass.m in Sources */,
 				162DED1A1ECACD4800ED2DCE /* ServerResponseModel.m in Sources */,
 				9CF75D341EB038D000F7112D /* AppDelegate.m in Sources */,
@@ -1047,6 +1066,7 @@
 				9C6648981EC18A5A001914BD /* SDImageCacheConfig.m in Sources */,
 				9CB089081EB1EFF7002E5D50 /* UIProgressView+AFNetworking.m in Sources */,
 				9CB3A6931EC4470700B13149 /* subRepairCell.m in Sources */,
+				9CC6B1FB1EE0FF8D00D1BA17 /* NAddPicController.m in Sources */,
 				9C82F1A81EBAB8C60024B3B1 /* RepairInfoCell.m in Sources */,
 				16E1BD2E1EC4900800BFBBAD /* MJPropertyKey.m in Sources */,
 				9CDBFC951ECAF6BF00BCF9A6 /* LeftSortsViewController.m in Sources */,

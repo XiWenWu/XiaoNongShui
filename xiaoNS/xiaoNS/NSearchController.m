@@ -112,6 +112,13 @@
     self.okeyBtn = okey;
     [self.view addSubview:okey];
     
+    [okey addTarget:self action:@selector(touchOkeyBtn) forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
+- (void)touchOkeyBtn {
+    NSLog(@"touchOkeyBtn");
+    NSLog(@"%@---%@", self.leixingLab.text, self.countryLab.text);
 }
 
 - (void)didReceiveMemoryWarning {

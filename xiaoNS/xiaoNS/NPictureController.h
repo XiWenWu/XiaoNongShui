@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define picMargin 10
+
 @interface NPictureController : UIViewController
 
 @property (nonatomic, strong) NSDictionary *imgs;
