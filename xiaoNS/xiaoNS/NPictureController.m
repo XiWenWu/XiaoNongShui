@@ -108,8 +108,27 @@
 
 - (void)addMorePic {
     NNavAddPicController *NavAddPic = [[NNavAddPicController alloc] init];
+    
+    NavAddPic.NNavAddPicInputID = self.NPictureInputID;
+    NavAddPic.NNavAddPicProindex = self.NPictureProindex;
+    NavAddPic.NNavAddPicUserID = self.NPictureUserID;
+    
     [self presentViewController:NavAddPic animated:YES completion:nil];
 }
+//- (void)addMorePic {
+//    // 系统自带的控制器
+//    UIImagePickerController *pic = [[UIImagePickerController alloc] init];
+//    pic.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//    pic.delegate = self;
+//    [self presentViewController:pic animated:YES completion:nil];
+//}
+//
+//# pragma mark 图片选择控制器的代理方法
+//- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+//    // 销毁  pic 控制器
+//    [picker dismissViewControllerAnimated:YES completion:nil];
+//    
+//}
 
 
 /*

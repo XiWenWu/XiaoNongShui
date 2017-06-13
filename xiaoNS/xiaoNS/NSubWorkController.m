@@ -80,9 +80,13 @@
     NBaseInfoController *baseInfo = [[NBaseInfoController alloc] init];
     baseInfo.title = @"基础信息";
     baseInfo.project = self.subWorkInfo[@"project"];
+    self.NSubWorkUserID = [self.subWorkInfo[@"project"][@"userid"] intValue];
     [self addChildViewController:baseInfo];
     
     NPictureController *picture = [[NPictureController alloc] init];
+    picture.NPictureInputID = self.NSubWorkInputID;
+    picture.NPictureProindex = self.NSubWorkProindex;
+    picture.NPictureUserID = self.NSubWorkUserID;
     picture.title = @"图片";
     picture.imgs = self.subWorkInfo[@"imgs"];
     [self addChildViewController:picture];

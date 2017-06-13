@@ -9,6 +9,7 @@
 #import "NWorkController.h"
 #import "NSubWorkController.h"
 #import "NNavSearchController.h"
+#import "NAddPicController.h"
 // 导入工具
 #import "AFHTTPSessionManager.h"
 // 导入模型
@@ -19,6 +20,7 @@
 @interface NWorkController ()
 /** 工程信息 */
 @property (nonatomic, strong) NSMutableArray *works;
+
 
 @end
 
@@ -81,7 +83,7 @@
     [manger GET:@"http://www.cloudowr.com:8801/nsgcgl/api/v3/projectList?key=android&userid=1" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        // NSLog(@"%@", responseObject[@"ret"][@"list"]);
+        NSLog(@"%@", responseObject[@"ret"][@"list"]);
         // 获取数据
         NSArray *dictArray = responseObject[@"ret"][@"list"];
         // 将字典数据转为模型数据
@@ -138,14 +140,22 @@
     self.hidesBottomBarWhenPushed = YES;
     //
     WorksInfo *work = self.works[indexPath.row];
+    NSLog(@"%@----%@", work.ID, work.proindex);
+    self.NWorkInputID = [work.ID intValue];
+    self.NWorkProindex = [work.proindex intValue];
+    
     NSString *subWorkUrl = [NSString stringWithFormat:@"http://www.cloudowr.com:8801/nsgcgl/api/v3/projectDetail?key=android&id=%@&proindex=%@", work.ID, work.proindex];
     subWork.subWorkUrl = subWorkUrl;
     // 界面跳转
+    subWork.NSubWorkInputID = self.NWorkInputID;
+    subWork.NSubWorkProindex = self.NWorkProindex;
     [self.navigationController pushViewController:subWork animated:YES];
     // 显示tabbar
     self.hidesBottomBarWhenPushed = NO;
     
 }
+
+
 
 /*
 // Override to support conditional editing of the table view.

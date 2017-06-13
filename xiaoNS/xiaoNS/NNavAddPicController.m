@@ -20,6 +20,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NAddPicController *addPic = [[NAddPicController alloc] init];
+    addPic.NAddPicInputID = self.NNavAddPicInputID;
+    addPic.NAddPicProindex = self.NNavAddPicProindex;
+    addPic.NAddPicUserID = self.NNavAddPicUserID;
     self.viewControllers = @[addPic];
 }
 

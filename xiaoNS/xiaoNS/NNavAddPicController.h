@@ -10,4 +10,12 @@
 
 @interface NNavAddPicController : UINavigationController
 
+
+/** */
+@property (nonatomic, assign) long NNavAddPicInputID;
+/** */
+@property (nonatomic, assign) long NNavAddPicProindex;
+/** */
+@property (nonatomic, assign) long NNavAddPicUserID;
+
 @end

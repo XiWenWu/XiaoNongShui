@@ -14,4 +14,12 @@
 
 @property (nonatomic, strong) NSString *subWorkUrl;
 
+
+/** */
+@property (nonatomic, assign) long NSubWorkInputID;
+/** */
+@property (nonatomic, assign) long NSubWorkProindex;
+/** */
+@property (nonatomic, assign) long NSubWorkUserID;
+
 @end

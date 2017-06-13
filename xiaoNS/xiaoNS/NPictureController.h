@@ -13,5 +13,11 @@
 @interface NPictureController : UIViewController
 
 @property (nonatomic, strong) NSDictionary *imgs;
+/** */
+@property (nonatomic, assign) long NPictureInputID;
+/** */
+@property (nonatomic, assign) long NPictureProindex;
+/** */
+@property (nonatomic, assign) long NPictureUserID;
 
 @end

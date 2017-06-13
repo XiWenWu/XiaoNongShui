@@ -23,12 +23,15 @@
 
 @property (nonatomic, assign) CGFloat scrollViewH;
 
+@property (nonatomic, assign) CGFloat totggle;
+
 @end
 
 @implementation NBaseInfoController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.totggle = 1;
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     NSLog(@"%@", self.project);
@@ -61,7 +64,6 @@
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     // 显示器高度 减去 导航栏高度  减去  界面切换高度
     scrollView.frame = CGRectMake(0, 0, scrollViewW, scrollViewH - tabH - tabMsgViewH);
-    scrollView.contentSize = CGSizeMake(0, self.subProjects.count * rowHeight);
     [self.view addSubview:scrollView];
     self.scrollView = scrollView;
     
@@ -87,7 +89,14 @@
     CGFloat msgLabelW = self.view.frame.size.width - titleLabelW;
     CGFloat msgLabelH = imageViewH;
     
-    for (int i=0; i< self.subProjects.count; i++ ) {
+    NSInteger count = 0;
+    if (self.totggle == 0) {
+        count = self.subProjects.count;
+    } else {
+        count = 5;
+    }
+    
+    for (int i=0; i< count; i++ ) {
         UIImageView *imageView = [[UIImageView alloc] init];
         CGFloat imageViewY = imageViewH * i;
         imageView.frame = CGRectMake(imageViewX, imageViewY, imageViewW, imageViewH);
@@ -104,8 +113,39 @@
         [imageView addSubview:msgLabel];
         
     }
+    
+    CGFloat tabBtnX = 0;
+    CGFloat tabBtnY = rowHeight * count;
+    CGFloat tabBtnW = imageViewW;
+    CGFloat tabBtnH = rowHeight;
+    UIButton *tabBtn = [[UIButton alloc] init];
+    tabBtn.frame = CGRectMake(tabBtnX, tabBtnY, tabBtnW, tabBtnH);
+    tabBtn.backgroundColor = [UIColor redColor];
+    if (self.totggle == 0) {
+        [tabBtn setTitle:@"收起" forState:UIControlStateNormal];
+    } else {
+        [tabBtn setTitle:@"更多" forState:UIControlStateNormal];
+    }
+    [self.scrollView addSubview:tabBtn];
+    
+    self.scrollView.contentSize = CGSizeMake(0, (count + 1) * rowHeight);
+    
+    [tabBtn addTarget:self action:@selector(toggleInfoView) forControlEvents:UIControlEventTouchUpInside];
+    
 
+}
 
+- (void)toggleInfoView {
+    NSLog(@"toggleInfoView");
+    if (self.totggle == 0) {
+        self.totggle = 1;
+    } else {
+        self.totggle = 0;
+    }
+    
+    [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self addSubViews];
+    
 }
 /*
 #pragma mark - Navigation

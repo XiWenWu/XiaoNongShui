@@ -10,4 +10,9 @@
 
 @interface NWorkController : UITableViewController
 
+/** */
+@property (nonatomic, assign) long NWorkInputID;
+/** */
+@property (nonatomic, assign) long NWorkProindex;
+
 @end
