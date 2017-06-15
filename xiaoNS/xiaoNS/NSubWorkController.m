@@ -31,7 +31,9 @@
     
     // [self setSubWorkInfos];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor purpleColor];
+    
+    self.navigationController.navigationBar.barTintColor = NavTitleColor;
+    self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"详情";
     // 获取导航的尺寸
     CGRect navFrame = self.navigationController.navigationBar.frame;

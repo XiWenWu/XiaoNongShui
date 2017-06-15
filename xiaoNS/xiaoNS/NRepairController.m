@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 设置导航栏的背景颜色
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:51.0/255 green:120.0/255 blue:1 alpha:1];
+    self.navigationController.navigationBar.barTintColor = NavTitleColor;
     self.tableView.rowHeight = 60;
     
     // Uncomment the following line to preserve selection between presentations.

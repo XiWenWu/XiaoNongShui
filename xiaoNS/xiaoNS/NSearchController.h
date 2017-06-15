@@ -15,7 +15,14 @@
 #define viewW self.view.frame.size.width
 // 字体高度
 #define labelH 44
+@protocol NSearchControllerDelegate<NSObject>
+@optional
+- (void)getNSearchCountry:(NSString *)country Town:(NSString *)town;
+@end
+
 
 @interface NSearchController : UIViewController
+
+@property (weak, nonatomic) id<NSearchControllerDelegate> delegate;
 
 @end

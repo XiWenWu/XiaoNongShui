@@ -18,9 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSearchController *search = [[NSearchController alloc] init];
-    
-    self.viewControllers = @[search];
+//    NSearchController *search = [[NSearchController alloc] init];
+//    
+//    self.viewControllers = @[search];
 }
 
 - (void)didReceiveMemoryWarning {

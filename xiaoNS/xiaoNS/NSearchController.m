@@ -119,6 +119,8 @@
 - (void)touchOkeyBtn {
     NSLog(@"touchOkeyBtn");
     NSLog(@"%@---%@", self.leixingLab.text, self.countryLab.text);
+    [self.delegate getNSearchCountry:self.leixingLab.text Town:self.countryLab.text];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

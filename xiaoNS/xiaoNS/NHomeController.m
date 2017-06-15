@@ -25,7 +25,7 @@
     self.navigationItem.title = @"首页";
     self.scrollView.backgroundColor = [UIColor whiteColor];
     // 设置导航栏的背景颜色
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:51.0/255 green:120.0/255 blue:1 alpha:1];
+    self.navigationController.navigationBar.barTintColor = NavTitleColor;
     
     // [self setFirstTools];
     self.scrollView.contentSize = CGSizeMake(0, 640);

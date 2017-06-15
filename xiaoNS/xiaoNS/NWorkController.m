@@ -9,6 +9,7 @@
 #import "NWorkController.h"
 #import "NSubWorkController.h"
 #import "NNavSearchController.h"
+#import "NSearchController.h"
 #import "NAddPicController.h"
 // 导入工具
 #import "AFHTTPSessionManager.h"
@@ -17,7 +18,7 @@
 #import "WorkInfoCell.h"
 
 
-@interface NWorkController ()
+@interface NWorkController ()<NSearchControllerDelegate>
 /** 工程信息 */
 @property (nonatomic, strong) NSMutableArray *works;
 
@@ -29,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 设置导航栏的背景颜色
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:51.0/255 green:120.0/255 blue:1.0 alpha:1];
+    self.navigationController.navigationBar.barTintColor = NavTitleColor;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -50,12 +51,18 @@
     self.tableView.separatorStyle = NO;
     self.tableView.backgroundColor = [UIColor colorWithRed:220.0/255 green:220.0/255 blue:220.0/255 alpha:1];
     self.works = [NSMutableArray array];
-    // 通过网络请求获取数据
+    // 通过网络请求获取数据 3247569370
     [self setUpWorks];
 }
 - (void)search {
     NNavSearchController *navSearch = [[NNavSearchController alloc] init];
+    NSearchController *search = [[NSearchController alloc] init];
+    navSearch.viewControllers = @[search];
+    search.delegate = self;
     [self presentViewController:navSearch animated:YES completion:nil];
+}
+- (void)getNSearchCountry:(NSString *)country Town:(NSString *)town {
+    NSLog(@"country = %@ ***  town = %@ ", country, town);
 }
 /** 通过网络请求获取数据 */
 - (void)setUpWorks {

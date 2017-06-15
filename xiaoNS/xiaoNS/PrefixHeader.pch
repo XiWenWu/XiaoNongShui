@@ -19,4 +19,6 @@
 #import "ServerResponseModel.h"
 #import "NetWork.h"
 
+#define NavTitleColor [UIColor colorWithRed:51.0/255 green:120.0/255 blue:1.0 alpha:1]
+
 #endif /* PrefixHeader_pch */
